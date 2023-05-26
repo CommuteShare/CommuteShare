@@ -10,8 +10,8 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 class UserAdmin(AbstractUser):
     username = models.CharField(unique=True)
-    first_name = models.CharField(unique=True)
-    last_name = models.CharField(unique=True)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
     email = models.EmailField(unique=True)
     phone_number = PhoneNumberField(unique=True)
     password = models.CharField(unique=True)
