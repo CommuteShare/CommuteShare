@@ -114,9 +114,9 @@ class VerificationModel(models.Model):
         ("FEMALE", "female")
     ]
     gender = models.CharField(null=False, blank=False, choices=GENDER_STATUS)
-    photograph = models.ImageField(null=False, blank=False, upload_to="images/")
-    id_card_front = models.ImageField(null=False, blank=False, upload_to="id_card_front/")
-    id_card_back = models.ImageField(null=False, blank=False, upload_to="id_card_back/")
+    id_card_front = models.ImageField(null=False, blank=False, upload_to="id-card-front/")
+    id_card_back = models.ImageField(null=False, blank=False, upload_to="id-card-back/")
+    photograph = models.ImageField(null=False, blank=False, upload_to="images1/")
     date_of_birth = models.DateField(null=False, blank=False, default='0000-00-0')
 
 
