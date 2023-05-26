@@ -43,7 +43,7 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 LOCAL_APPS = ['commute_share', 'api']
-THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary', 'cloudinary_storage', 'phonenumbers']
+THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary', 'cloudinary_storage', 'phonenumbers','gunicorn']
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
 
@@ -89,7 +89,7 @@ DATABASES = {
         'USER': m_secrets.DB_USER,
         'PASSWORD': m_secrets.DB_PASSWORD,
         'HOST': m_secrets.DB_HOST,
-        'PORT':m_secrets.DB_PORT,
+        'PORT': m_secrets.DB_PORT,
     }
 }
 
@@ -155,7 +155,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'AUTH_HEADER_TYPES': ('JWT',),
+    'AUTH_HEADER_TYPES': ('Bearer',),
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1)
 }
 
@@ -165,6 +165,11 @@ DJOSER = {
     }
 }
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': m_secrets.CLOUD_NAME,
+    'API_KEY': m_secrets.API_KEY,
+    'API_SECRET': m_secrets.API_SECRET,
+    # 'CLOUDINARY_URL': m_secrets.CLOUD_URL
+}
+
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-API_KEY = m_secrets.API_KEY
-API_SECRET = m_secrets.SECRET_KEY

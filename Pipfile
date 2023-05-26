@@ -12,6 +12,7 @@ djoser = "*"
 psycopg2-binary = "*"
 django-cloudinary-storage = "*"
 django-phonenumber-field = "*"
+gunicorn = "*"
 
 [dev-packages]
 
