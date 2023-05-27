@@ -30,7 +30,9 @@ SECRET_KEY = m_secrets.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost', '127.0.0.1',
+]
 
 # Application definition
 
@@ -43,7 +45,8 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 LOCAL_APPS = ['commute_share', 'api']
-THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary', 'cloudinary_storage', 'phonenumbers','gunicorn']
+THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser',
+               'cloudinary', 'cloudinary_storage', 'phonenumbers', 'gunicorn']
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
 
