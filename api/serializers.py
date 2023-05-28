@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from commute_share.models import *
 from phonenumber_field.serializerfields import PhoneNumberField
+from rest_framework.permissions import IsAuthenticated
 
 from djoser.serializers import UserCreateSerializer as CreateSerializer
 
@@ -66,3 +67,52 @@ class UserCreate(CreateSerializer):
 
     class Meta(CreateSerializer.Meta):
         fields = ['first_name', 'last_name', 'phone_number', 'username', 'email', 'password']
+
+
+# class DriverSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = DriverModel
+#         fields = ('name', 'car_model', 'license_number')
+#
+#     def validate_license_number(self, value):
+#         existing_driver = DriverModel.objects.filter(license_number=value).first()
+#         if existing_driver:
+#             raise serializers.ValidationError('A driver with this license number already exists.')
+#         return value
+#
+#     def create(self, validated_data):
+#         driver = DriverModel.objects.create(**validated_data)
+#         return driver
+
+
+class DriverSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+
+    def create(self, validated_data):
+        password = validated_data.pop('password')
+        driver = DriverModel(**validated_data)
+        driver.set_password(password)
+        driver.save()
+        return driver
+
+    class Meta:
+        model = DriverModel
+        fields = ('id', 'username', 'password', 'name', 'car_model', 'license_number')
+
+
+class DriverLoginSerializer(serializers.Serializer):
+    username = serializers.CharField()
+    password = serializers.CharField()
+
+
+class RideSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RideModel
+        fields = ('id', 'driver', 'source', 'destination', 'departure_time')
+
+    def create(self, validated_data):
+        validated_data['driver'] = self.context['request'].user
+        ride = RideModel.objects.create(**validated_data)
+        return ride
+
+
