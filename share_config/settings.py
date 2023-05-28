@@ -12,10 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from datetime import timedelta
-# from phonenumber_field.modelfields import PhoneNumberField
-# from cloudinary_storage.storage import MediaCloudinaryStorage
-import phonenumbers
-import cloudinary
+import phonenumber_field
+import cloudinary_storage
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -43,7 +41,7 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 LOCAL_APPS = ['commute_share', 'api']
-THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary', 'cloudinary_storage', 'phonenumbers_field']
+THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary','phonenumbers','cloudinary_storage','phonenumber_field']
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
 
@@ -139,6 +137,11 @@ INTERNAL_IPS = ["127.0.0.1", ]
 #     'JWT_AUTH_HEADER_PREFIX': 'Token',
 # }
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'your_cloud_name',
+    'API_KEY': 'your_api_key',
+    'API_SECRET': 'your_api_secret'
+}
 
 REST_FRAMEWORK = {
     # 'COERCE_DECIMAL_TO_STRING': False,

@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from djoser.serializers import UserCreateSerializer as CreateSerializer
 
 
-class CarModel(serializers.ModelSerializer):
+class CarSerializer(serializers.ModelSerializer):
     class Meta:
         model = CarModel
         fields = ['license_plate_number', 'identification_number', 'color']
@@ -86,13 +86,22 @@ class UserCreate(CreateSerializer):
 
 
 class DriverSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
+    user = UserSerializer
+    verify_driver = VerificationSerializer
+    car = CarSerializer
 
     def create(self, validated_data):
-        password = validated_data.pop('password')
-        driver = DriverModel(**validated_data)
-        driver.set_password(password)
-        driver.save()
+        user_data = validated_data.pop('driver')
+        user_serializer = UserSerializer(data=user_data)
+        user_serializer.is_valid(raise_exception=True)
+        user = user_serializer.save()
+
+        verification_data = validated_data.pop('verification')
+        verification_serializer = VerificationSerializer(data=verification_data)
+        verification_serializer.is_valid(raise_exception=True)
+        verification = verification_serializer.save()
+
+        driver = DriverModel.objects.create(user=user, verification=verification, **validated_data)
         return driver
 
     class Meta:

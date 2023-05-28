@@ -47,17 +47,19 @@ class PassengerViewSet(ModelViewSet):
 
 class DriverRegistrationView(generics.CreateAPIView):
     serializer_class = DriverSerializer
+    queryset = DriverModel.objects.all()
+    permission_classes = [IsUser]
 
 
-class DriverLoginView(generics.GenericAPIView):
-    serializer_class = DriverLoginSerializer
-
-    def post(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        driver = serializer.validated_data
-        token, _ = Token.objects.get_or_create(user=driver)
-        return Response({'token': token.key})
+# class DriverLoginView(generics.GenericAPIView):
+#     serializer_class = DriverLoginSerializer
+#
+#     def post(self, request, *args, **kwargs):
+#         serializer = self.get_serializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         driver = serializer.validated_data
+#         token, _ = Token.objects.get_or_create(user=driver)
+#         return Response({'token': token.key})
 
 
 class RideCreateView(generics.CreateAPIView):
