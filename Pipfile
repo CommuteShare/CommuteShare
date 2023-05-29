@@ -16,6 +16,7 @@ gunicorn = "*"
 heroku = "*"
 django-heroku = "*"
 dj-database-url = "*"
+awsebcli = "*"
 
 [dev-packages]
 
