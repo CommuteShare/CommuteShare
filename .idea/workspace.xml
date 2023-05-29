@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8482fb4e-3ab7-4453-a890-9dc9b31c3919" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CommuteShare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommuteShare.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/37fc07d8-568c-4092-bff3-68e48c27e91f/storage_v2/_src_/schema/commuteshare_db.-JHpkw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/37fc07d8-568c-4092-bff3-68e48c27e91f/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/37fc07d8-568c-4092-bff3-68e48c27e91f/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/37fc07d8-568c-4092-bff3-68e48c27e91f/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/37fc07d8-568c-4092-bff3-68e48c27e91f/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commute_share/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commute_share/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/commute_share/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/share_config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/share_config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +90,7 @@
       <workItem from="1685268980548" duration="1392000" />
       <workItem from="1685284638521" duration="8085000" />
       <workItem from="1685327562703" duration="1412000" />
-      <workItem from="1685330466087" duration="749000" />
+      <workItem from="1685330466087" duration="2339000" />
     </task>
     <servers />
   </component>
