@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8482fb4e-3ab7-4453-a890-9dc9b31c3919" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.github/workflows/django.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.github/workflows/jekyll-gh-pages.yml" afterDir="false" />
@@ -6015,6 +6016,10 @@
       <change beforePath="$PROJECT_DIR$/commute_share/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/commute_share/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/share_config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/share_config/settings.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+>>>>>>> 4d1d31e741bab14ce215c58b4b3b9382c8c23284
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
