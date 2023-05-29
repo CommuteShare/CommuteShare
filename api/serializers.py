@@ -69,29 +69,17 @@ class UserCreate(CreateSerializer):
         fields = ['first_name', 'last_name', 'phone_number', 'username', 'email', 'password']
 
 
-# class DriverSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = DriverModel
-#         fields = ('name', 'car_model', 'license_number')
-#
-#     def validate_license_number(self, value):
-#         existing_driver = DriverModel.objects.filter(license_number=value).first()
-#         if existing_driver:
-#             raise serializers.ValidationError('A driver with this license number already exists.')
-#         return value
-#
-#     def create(self, validated_data):
-#         driver = DriverModel.objects.create(**validated_data)
-#         return driver
-
-
 class DriverSerializer(serializers.ModelSerializer):
-    user = UserSerializer
-    verify_driver = VerificationSerializer
-    car = CarSerializer
+    user = UserSerializer()
+    verify_driver = VerificationSerializer()
+    car = CarSerializer()
+
+    class Meta:
+        model = DriverModel
+        fields = ['user', 'car', 'verification', 'licence_number']
 
     def create(self, validated_data):
-        user_data = validated_data.pop('driver')
+        user_data = validated_data.pop('user')
         user_serializer = UserSerializer(data=user_data)
         user_serializer.is_valid(raise_exception=True)
         user = user_serializer.save()
@@ -101,23 +89,19 @@ class DriverSerializer(serializers.ModelSerializer):
         verification_serializer.is_valid(raise_exception=True)
         verification = verification_serializer.save()
 
-        driver = DriverModel.objects.create(user=user, verification=verification, **validated_data)
+        car_data = validated_data.pop('car')
+        car_serializer = CarSerializer(data=car_data)
+        car_serializer.is_valid(raise_exception=True)
+        car = car_serializer.save()
+
+        driver = DriverModel.objects.create(user=user, verification=verification, car=car, **validated_data)
         return driver
-
-    class Meta:
-        model = DriverModel
-        fields = ('id', 'username', 'password', 'name', 'car_model', 'license_number')
-
-
-class DriverLoginSerializer(serializers.Serializer):
-    username = serializers.CharField()
-    password = serializers.CharField()
 
 
 class RideSerializer(serializers.ModelSerializer):
     class Meta:
         model = RideModel
-        fields = ('id', 'driver', 'source', 'destination', 'departure_time')
+        fields = ['id', 'driver', 'source', 'destination', 'departure_time']
 
     def create(self, validated_data):
         validated_data['driver'] = self.context['request'].user
@@ -125,3 +109,7 @@ class RideSerializer(serializers.ModelSerializer):
         return ride
 
 
+class CreateRideSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CreateRide
+        fields = ['departure_location', 'destination_location', 'departure_time', 'available_seats']

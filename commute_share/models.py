@@ -9,15 +9,9 @@ from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 
 class UserAdmin(AbstractUser):
-<<<<<<< HEAD
-    username = models.CharField(unique=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-=======
     username = models.CharField(unique=True, max_length=100)
     first_name = models.CharField(unique=True, max_length=100)
     last_name = models.CharField(unique=True, max_length=100)
->>>>>>> 7e71e4b7e77efc03a864ea06ad4b763e917aad48
     email = models.EmailField(unique=True)
     phone_number = PhoneNumberField(unique=True)
     password = models.CharField(unique=True, max_length=100)
@@ -119,18 +113,11 @@ class VerificationModel(models.Model):
         ("MALE", "male"),
         ("FEMALE", "female")
     ]
-<<<<<<< HEAD
-    gender = models.CharField(null=False, blank=False, choices=GENDER_STATUS)
-    id_card_front = models.ImageField(null=False, blank=False, upload_to="id-card-front/")
-    id_card_back = models.ImageField(null=False, blank=False, upload_to="id-card-back/")
-    photograph = models.ImageField(null=False, blank=False, upload_to="images1/")
-=======
+
     gender = models.CharField(null=False, blank=False, choices=GENDER_STATUS, max_length=100)
     photograph = models.ImageField(null=False, blank=False, upload_to="images/")
     id_card_front = models.ImageField(null=False, blank=False, upload_to="id_card_front/")
     id_card_back = models.ImageField(null=False, blank=False, upload_to="id_card_back/")
->>>>>>> 7e71e4b7e77efc03a864ea06ad4b763e917aad48
-    date_of_birth = models.DateField(null=False, blank=False, default='0000-00-0')
 
 
 class CarModel(models.Model):

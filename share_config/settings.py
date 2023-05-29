@@ -10,12 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
-<<<<<<< HEAD
 import django_heroku
 import dj_database_url
 import m_secrets
-=======
->>>>>>> 7e71e4b7e77efc03a864ea06ad4b763e917aad48
 from pathlib import Path
 from datetime import timedelta
 import phonenumber_field
@@ -34,13 +31,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = [
-    'localhost', '127.0.0.1',
-]
-=======
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
->>>>>>> 7e71e4b7e77efc03a864ea06ad4b763e917aad48
+
+ALLOWED_HOSTS = ['localhost','Simi7.pythonanywhere.com']
+
 
 # Application definition
 
@@ -53,12 +46,10 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 LOCAL_APPS = ['commute_share', 'api']
-<<<<<<< HEAD
-THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser',
-               'cloudinary', 'cloudinary_storage', 'phonenumbers', 'gunicorn']
-=======
+
+
 THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary','phonenumbers','cloudinary_storage','phonenumber_field']
->>>>>>> 7e71e4b7e77efc03a864ea06ad4b763e917aad48
+
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
 
@@ -99,20 +90,13 @@ WSGI_APPLICATION = 'share_config.wsgi.application'
 
 DATABASES = {
     'default': {
-<<<<<<< HEAD
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': m_secrets.DB_NAME,
         'USER': m_secrets.DB_USER,
         'PASSWORD': m_secrets.DB_PASSWORD,
         'HOST': m_secrets.DB_HOST,
         'PORT': m_secrets.DB_PORT,
-=======
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
->>>>>>> 7e71e4b7e77efc03a864ea06ad4b763e917aad48
+
     }
 }
 
@@ -149,6 +133,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -163,11 +148,6 @@ INTERNAL_IPS = ["127.0.0.1", ]
 #     'JWT_AUTH_HEADER_PREFIX': 'Token',
 # }
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'your_cloud_name',
-    'API_KEY': 'your_api_key',
-    'API_SECRET': 'your_api_secret'
-}
 
 REST_FRAMEWORK = {
     # 'COERCE_DECIMAL_TO_STRING': False,
@@ -201,13 +181,10 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-<<<<<<< HEAD
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-django_heroku.settings(locals())
-=======
-# API_KEY = os.getenv('API_KEY')
-# API_SECRET = os.getenv('SECRET_KEY')
->>>>>>> 7e71e4b7e77efc03a864ea06ad4b763e917aad48
+
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+#
+# django_heroku.settings(locals())
+
