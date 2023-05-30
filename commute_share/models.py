@@ -91,6 +91,9 @@ class DriverModel(models.Model):
     def get_unread_notifications(self):
         return NotificationModel.objects.filter(user=self, is_read=False)
 
+    def __str__(self):
+        return f'{self.user.first_name}--{self.user.last_name}'
+
 
 class CustomerServiceModel(models.Model):
     RESPONSE_STATUS = [
@@ -117,7 +120,6 @@ class VerificationModel(models.Model):
     photograph = models.ImageField(null=False, blank=False, upload_to="images/")
     id_card_front = models.ImageField(null=False, blank=False, upload_to="id_card_front/")
     id_card_back = models.ImageField(null=False, blank=False, upload_to="id_card_back/")
-    date_of_birth = models.DateField(null=False, blank=False, default='0000-00-0')
 
 
 class CarModel(models.Model):
@@ -125,8 +127,6 @@ class CarModel(models.Model):
     identification_number = models.CharField(max_length=17, null=False, blank=False)
     color = models.CharField(null=False, blank=False, max_length=100)
     model = models.CharField(max_length=100)
-
-
 
 class RideModel(models.Model):
     departure_location = models.CharField(null=False, blank=False, max_length=1000)
@@ -167,7 +167,24 @@ class PaymentModel(models.Model):
 
 
 class CreateRide(models.Model):
+    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
     departure_location = models.CharField(null=False, blank=False, max_length=1000)
+    destination_location = models.CharField(null=False, blank=False, max_length=100)
+    departure_time = models.TimeField(null=False, blank=False, max_length=100)
+    available_seats = models.IntegerField(null=False, blank=False)
+
+    def check_ride(self, destination_location):
+        return CreateRide.objects.filter(destination_location=destination_location)
+
+    def __str__(self):
+        return f'{self.driver.user.first_name}--{self.driver.user.last_name}'
+
+
+class CheckDrivers(models.Model):
+    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
+    car_color = models.CharField(max_length=10)
+    car_plate_number = models.CharField(max_length=7, null=False, blank=False)
+    phone_number = PhoneNumberField()
     destination_location = models.CharField(null=False, blank=False, max_length=100)
     departure_time = models.TimeField(null=False, blank=False, max_length=100)
     available_seats = models.IntegerField(null=False, blank=False)

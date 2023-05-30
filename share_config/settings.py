@@ -10,6 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
+<<<<<<< HEAD
+=======
+
+import m_secrets
+>>>>>>> 73a749736cdc335b5e8921c0a9e0d15ae07a3ec5
 from pathlib import Path
 from datetime import timedelta
 import phonenumber_field
@@ -28,7 +33,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -41,6 +48,7 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 LOCAL_APPS = ['commute_share', 'api']
+
 THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary','phonenumbers','cloudinary_storage','phonenumber_field']
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
@@ -123,6 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -157,7 +166,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'AUTH_HEADER_TYPES': ('JWT',),
+    'AUTH_HEADER_TYPES': ('Bearer',),
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1)
 }
 
@@ -167,6 +176,15 @@ DJOSER = {
     }
 }
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': m_secrets.CLOUD_NAME,
+    'API_KEY': m_secrets.API_KEY,
+    'API_SECRET': m_secrets.API_SECRET,
+    # 'CLOUDINARY_URL': m_secrets.CLOUD_URL
+}
+
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 # API_KEY = os.getenv('API_KEY')
 # API_SECRET = os.getenv('SECRET_KEY')
+

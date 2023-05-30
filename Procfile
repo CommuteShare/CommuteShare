@@ -1,0 +1,1 @@
+web: guicorn share_config.wsgi --log-file-
