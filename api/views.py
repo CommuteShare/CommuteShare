@@ -27,23 +27,21 @@ class PassengerViewSet(ModelViewSet):
         return queryset
 
 
-# class DriverRegistrationView(generics.CreateAPIView):
-#     serializer_class = DriverSerializer
-#
-#     def post(self, request, *args, **kwargs):
-#         serializer = self.get_serializer(data=request.data)
-#         serializer.is_valid(raise_exception=True)
-#         self.perform_create(serializer)
-#         headers = self.get_success_headers(serializer.data)
-#         return Response({
-#             'message': 'Driver registered successfully.',
-#             'data': serializer.data
-#         }, status=201, headers=headers)
-#
-#     def perform_create(self, serializer):
-#         serializer.save()
+class DriverRegistrationView(generics.CreateAPIView):
+    serializer_class = DriverSerializer
 
-# views.py
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response({
+            'message': 'Driver registered successfully.',
+            'data': serializer.data
+        }, status=201, headers=headers)
+
+    def perform_create(self, serializer):
+        serializer.save()
 
 
 class DriverRegistrationView(generics.CreateAPIView):
@@ -63,9 +61,18 @@ class DriverRegistrationView(generics.CreateAPIView):
 #         return Response({'token': token.key})
 
 
-class RideCreateView(generics.CreateAPIView):
-    serializer_class = RideSerializer
-    permission_classes = [IsAuthenticated]
+# class RideCreateView(generics.CreateAPIView):
+#     serializer_class = RideSerializer
+#     # permission_classes = [IsAuthenticated]
+
+
+class CreateRideView(APIView):
+    def post(self, request):
+        serializer = RideSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
 
 
 class BookRideView(APIView):
@@ -80,6 +87,3 @@ class BookRideView(APIView):
         rides = RideModel.objects.all()
         serializer = RideSerializer(rides, many=True)
         return Response(serializer.data)
-
-
-
