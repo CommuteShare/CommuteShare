@@ -9,7 +9,7 @@ from djoser.serializers import UserCreateSerializer as CreateSerializer
 class CarSerializer(serializers.ModelSerializer):
     class Meta:
         model = CarModel
-        fields = ['license_plate_number', 'identification_number', 'color']
+        fields = ['license_plate_number', 'identification_number', 'color', 'model']
 
 
 class CompanySerializer(serializers.ModelSerializer):
@@ -36,7 +36,7 @@ class UserSerializer(serializers.ModelSerializer):
 class VerificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = VerificationModel
-        fields = ['gender', 'photograph', 'id_card_front', 'id_card_back', 'date_of_birth']
+        fields = ['gender', 'photograph', 'id_card_front', 'id_card_back']
 
 
 class PassengerSerializer(serializers.ModelSerializer):
@@ -71,12 +71,12 @@ class UserCreate(CreateSerializer):
 
 class DriverSerializer(serializers.ModelSerializer):
     user = UserSerializer()
-    verify_driver = VerificationSerializer()
+    verification = VerificationSerializer()
     car = CarSerializer()
 
     class Meta:
         model = DriverModel
-        fields = ['user', 'car', 'verification', 'licence_number']
+        fields = ['user', 'car', 'verification', 'licence_number', 'identity_verified']
 
     def create(self, validated_data):
         user_data = validated_data.pop('user')
@@ -98,18 +98,31 @@ class DriverSerializer(serializers.ModelSerializer):
         return driver
 
 
-class RideSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = RideModel
-        fields = ['id', 'driver', 'source', 'destination', 'departure_time']
+class RideSerializer(serializers.Serializer):
+    departure_location = serializers.CharField(max_length=1000)
+    destination_location = serializers.CharField(max_length=1000)
 
     def create(self, validated_data):
-        validated_data['driver'] = self.context['request'].user
-        ride = RideModel.objects.create(**validated_data)
-        return ride
+        departure_location = validated_data.get('departure_location')
+        destination_location = validated_data.get('destination_location')
+        return {
+            'departure_location': departure_location,
+            'destination_location': destination_location
+        }
+
+
+class CheckDriverSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CheckDrivers
+        fields = "__all__"
 
 
 class CreateRideSerializer(serializers.ModelSerializer):
     class Meta:
         model = CreateRide
-        fields = ['departure_location', 'destination_location', 'departure_time', 'available_seats']
+        fields = ['driver', 'departure_location', 'destination_location', 'departure_time', 'available_seats']
+
+# class BookRideSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = BookRideModel
+#         fields = ['driver']

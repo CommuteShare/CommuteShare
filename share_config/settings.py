@@ -10,8 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
-import django_heroku
-import dj_database_url
+
 import m_secrets
 from pathlib import Path
 from datetime import timedelta
@@ -29,10 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
-ALLOWED_HOSTS = ['localhost','Simi7.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 
 # Application definition

@@ -91,6 +91,9 @@ class DriverModel(models.Model):
     def get_unread_notifications(self):
         return NotificationModel.objects.filter(user=self, is_read=False)
 
+    def __str__(self):
+        return f'{self.user.first_name}--{self.user.last_name}'
+
 
 class CustomerServiceModel(models.Model):
     RESPONSE_STATUS = [
@@ -103,7 +106,8 @@ class CustomerServiceModel(models.Model):
     ride = models.ForeignKey("RideModel", on_delete=models.PROTECT)
     subject = models.CharField(null=False, blank=False, max_length=100)
     message = models.CharField(null=False, blank=False, max_length=100)
-    response_status = models.CharField(null=False, blank=False, choices=RESPONSE_STATUS, default="closed", max_length=100)
+    response_status = models.CharField(null=False, blank=False, choices=RESPONSE_STATUS, default="closed",
+                                       max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -125,7 +129,6 @@ class CarModel(models.Model):
     identification_number = models.CharField(max_length=17, null=False, blank=False)
     color = models.CharField(null=False, blank=False, max_length=100)
     model = models.CharField(max_length=100)
-
 
 
 class RideModel(models.Model):
@@ -167,7 +170,24 @@ class PaymentModel(models.Model):
 
 
 class CreateRide(models.Model):
+    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
     departure_location = models.CharField(null=False, blank=False, max_length=1000)
+    destination_location = models.CharField(null=False, blank=False, max_length=100)
+    departure_time = models.TimeField(null=False, blank=False, max_length=100)
+    available_seats = models.IntegerField(null=False, blank=False)
+
+    def check_ride(self, destination_location):
+        return CreateRide.objects.filter(destination_location=destination_location)
+
+    def __str__(self):
+        return f'{self.driver.user.first_name}--{self.driver.user.last_name}'
+
+
+class CheckDrivers(models.Model):
+    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
+    car_color = models.CharField(max_length=10)
+    car_plate_number = models.CharField(max_length=7, null=False, blank=False)
+    phone_number = PhoneNumberField()
     destination_location = models.CharField(null=False, blank=False, max_length=100)
     departure_time = models.TimeField(null=False, blank=False, max_length=100)
     available_seats = models.IntegerField(null=False, blank=False)
