@@ -9,12 +9,12 @@ from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 
 class UserAdmin(AbstractUser):
-    username = models.CharField(unique=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    username = models.CharField(unique=True, max_length=100)
+    first_name = models.CharField(unique=True, max_length=100)
+    last_name = models.CharField(unique=True, max_length=100)
     email = models.EmailField(unique=True)
     phone_number = PhoneNumberField(unique=True)
-    password = models.CharField(unique=True)
+    password = models.CharField(unique=True, max_length=100)
 
 
 class User(models.Model):
@@ -91,6 +91,9 @@ class DriverModel(models.Model):
     def get_unread_notifications(self):
         return NotificationModel.objects.filter(user=self, is_read=False)
 
+    def __str__(self):
+        return f'{self.user.first_name}--{self.user.last_name}'
+
 
 class CustomerServiceModel(models.Model):
     RESPONSE_STATUS = [
@@ -101,9 +104,10 @@ class CustomerServiceModel(models.Model):
     ]
     user = models.OneToOneField(User, on_delete=models.PROTECT)
     ride = models.ForeignKey("RideModel", on_delete=models.PROTECT)
-    subject = models.CharField(null=False, blank=False)
-    message = models.CharField(null=False, blank=False)
-    response_status = models.CharField(null=False, blank=False, choices=RESPONSE_STATUS, default="closed")
+    subject = models.CharField(null=False, blank=False, max_length=100)
+    message = models.CharField(null=False, blank=False, max_length=100)
+    response_status = models.CharField(null=False, blank=False, choices=RESPONSE_STATUS, default="closed",
+                                       max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -113,23 +117,23 @@ class VerificationModel(models.Model):
         ("MALE", "male"),
         ("FEMALE", "female")
     ]
-    gender = models.CharField(null=False, blank=False, choices=GENDER_STATUS)
-    id_card_front = models.ImageField(null=False, blank=False, upload_to="id-card-front/")
-    id_card_back = models.ImageField(null=False, blank=False, upload_to="id-card-back/")
-    photograph = models.ImageField(null=False, blank=False, upload_to="images1/")
-    date_of_birth = models.DateField(null=False, blank=False, default='0000-00-0')
+
+    gender = models.CharField(null=False, blank=False, choices=GENDER_STATUS, max_length=100)
+    photograph = models.ImageField(null=False, blank=False, upload_to="images/")
+    id_card_front = models.ImageField(null=False, blank=False, upload_to="id_card_front/")
+    id_card_back = models.ImageField(null=False, blank=False, upload_to="id_card_back/")
 
 
 class CarModel(models.Model):
     license_plate_number = models.CharField(max_length=7, null=False, blank=False)
     identification_number = models.CharField(max_length=17, null=False, blank=False)
-    color = models.CharField(null=False, blank=False)
-    model = models.CharField()
+    color = models.CharField(null=False, blank=False, max_length=100)
+    model = models.CharField(max_length=100)
 
 
 class RideModel(models.Model):
-    departure_location = models.CharField(null=False, blank=False)
-    destination_location = models.CharField(null=False, blank=False)
+    departure_location = models.CharField(null=False, blank=False, max_length=1000)
+    destination_location = models.CharField(null=False, blank=False, max_length=1000)
 
 
 class BookRideModel(models.Model):
@@ -143,7 +147,7 @@ class BookRideModel(models.Model):
     driver = models.ForeignKey(DriverModel, on_delete=models.PROTECT)
     available_seats = models.IntegerField(null=False, blank=False)
     departure_time = models.TimeField(null=False, blank=False)
-    ride_status = models.CharField(null=False, blank=False, choices=RIDE_STATUS, default='pending')
+    ride_status = models.CharField(null=False, blank=False, choices=RIDE_STATUS, default='pending', max_length=1000)
     price = models.DecimalField(max_digits=6, default=0, decimal_places=2)
 
 
@@ -160,15 +164,32 @@ class PaymentModel(models.Model):
     ]
     user = models.OneToOneField(User, on_delete=models.PROTECT)
     ride = models.ForeignKey(BookRideModel, on_delete=models.PROTECT)
-    payment_status = models.CharField(null=False, blank=False, choices=PAYMENT_STATUS)
-    payment_method = models.CharField(null=False, blank=False, choices=PAYMENT_METHOD)
-    payment_description = models.CharField(null=False, blank=True)
+    payment_status = models.CharField(null=False, blank=False, choices=PAYMENT_STATUS, max_length=100)
+    payment_method = models.CharField(null=False, blank=False, choices=PAYMENT_METHOD, max_length=100)
+    payment_description = models.CharField(null=False, blank=True, max_length=100)
 
 
 class CreateRide(models.Model):
-    departure_location = models.CharField(null=False, blank=False)
-    destination_location = models.CharField(null=False, blank=False)
-    departure_time = models.TimeField(null=False, blank=False)
+    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
+    departure_location = models.CharField(null=False, blank=False, max_length=1000)
+    destination_location = models.CharField(null=False, blank=False, max_length=100)
+    departure_time = models.TimeField(null=False, blank=False, max_length=100)
+    available_seats = models.IntegerField(null=False, blank=False)
+
+    def check_ride(self, destination_location):
+        return CreateRide.objects.filter(destination_location=destination_location)
+
+    def __str__(self):
+        return f'{self.driver.user.first_name}--{self.driver.user.last_name}'
+
+
+class CheckDrivers(models.Model):
+    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
+    car_color = models.CharField(max_length=10)
+    car_plate_number = models.CharField(max_length=7, null=False, blank=False)
+    phone_number = PhoneNumberField()
+    destination_location = models.CharField(null=False, blank=False, max_length=100)
+    departure_time = models.TimeField(null=False, blank=False, max_length=100)
     available_seats = models.IntegerField(null=False, blank=False)
 
 

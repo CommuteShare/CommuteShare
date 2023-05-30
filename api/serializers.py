@@ -1,14 +1,15 @@
 from rest_framework import serializers
 from commute_share.models import *
 from phonenumber_field.serializerfields import PhoneNumberField
+from rest_framework.permissions import IsAuthenticated
 
 from djoser.serializers import UserCreateSerializer as CreateSerializer
 
 
-class CarModel(serializers.ModelSerializer):
+class CarSerializer(serializers.ModelSerializer):
     class Meta:
         model = CarModel
-        fields = ['license_plate_number', 'identification_number', 'color']
+        fields = ['license_plate_number', 'identification_number', 'color', 'model']
 
 
 class CompanySerializer(serializers.ModelSerializer):
@@ -35,7 +36,7 @@ class UserSerializer(serializers.ModelSerializer):
 class VerificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = VerificationModel
-        fields = ['gender', 'photograph', 'id_card_front', 'id_card_back', 'date_of_birth']
+        fields = ['gender', 'photograph', 'id_card_front', 'id_card_back']
 
 
 class PassengerSerializer(serializers.ModelSerializer):
@@ -66,3 +67,62 @@ class UserCreate(CreateSerializer):
 
     class Meta(CreateSerializer.Meta):
         fields = ['first_name', 'last_name', 'phone_number', 'username', 'email', 'password']
+
+
+class DriverSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
+    verification = VerificationSerializer()
+    car = CarSerializer()
+
+    class Meta:
+        model = DriverModel
+        fields = ['user', 'car', 'verification', 'licence_number', 'identity_verified']
+
+    def create(self, validated_data):
+        user_data = validated_data.pop('user')
+        user_serializer = UserSerializer(data=user_data)
+        user_serializer.is_valid(raise_exception=True)
+        user = user_serializer.save()
+
+        verification_data = validated_data.pop('verification')
+        verification_serializer = VerificationSerializer(data=verification_data)
+        verification_serializer.is_valid(raise_exception=True)
+        verification = verification_serializer.save()
+
+        car_data = validated_data.pop('car')
+        car_serializer = CarSerializer(data=car_data)
+        car_serializer.is_valid(raise_exception=True)
+        car = car_serializer.save()
+
+        driver = DriverModel.objects.create(user=user, verification=verification, car=car, **validated_data)
+        return driver
+
+
+class RideSerializer(serializers.Serializer):
+    departure_location = serializers.CharField(max_length=1000)
+    destination_location = serializers.CharField(max_length=1000)
+
+    def create(self, validated_data):
+        departure_location = validated_data.get('departure_location')
+        destination_location = validated_data.get('destination_location')
+        return {
+            'departure_location': departure_location,
+            'destination_location': destination_location
+        }
+
+
+class CheckDriverSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CheckDrivers
+        fields = "__all__"
+
+
+class CreateRideSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CreateRide
+        fields = ['driver', 'departure_location', 'destination_location', 'departure_time', 'available_seats']
+
+# class BookRideSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = BookRideModel
+#         fields = ['driver']

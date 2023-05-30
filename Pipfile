@@ -13,6 +13,10 @@ psycopg2-binary = "*"
 django-cloudinary-storage = "*"
 django-phonenumber-field = "*"
 gunicorn = "*"
+heroku = "*"
+django-heroku = "*"
+dj-database-url = "*"
+awsebcli = "*"
 
 [dev-packages]
 
