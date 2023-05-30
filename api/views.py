@@ -8,6 +8,7 @@ from rest_framework.permissions import IsAuthenticated
 from .serializers import *
 from commute_share.models import *
 from .permissions import *
+from rest_framework.views import APIView
 
 
 class PassengerViewSet(ModelViewSet):
@@ -65,3 +66,20 @@ class DriverRegistrationView(generics.CreateAPIView):
 class RideCreateView(generics.CreateAPIView):
     serializer_class = RideSerializer
     permission_classes = [IsAuthenticated]
+
+
+class BookRideView(APIView):
+    def post(self, request):
+        serializer = PassengerSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
+
+    def get(self, request):
+        rides = RideModel.objects.all()
+        serializer = RideSerializer(rides, many=True)
+        return Response(serializer.data)
+
+
+

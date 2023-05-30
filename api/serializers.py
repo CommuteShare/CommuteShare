@@ -69,43 +69,48 @@ class UserCreate(CreateSerializer):
         fields = ['first_name', 'last_name', 'phone_number', 'username', 'email', 'password']
 
 
-# class DriverSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = DriverModel
-#         fields = ('name', 'car_model', 'license_number')
-#
-#     def validate_license_number(self, value):
-#         existing_driver = DriverModel.objects.filter(license_number=value).first()
-#         if existing_driver:
-#             raise serializers.ValidationError('A driver with this license number already exists.')
-#         return value
-#
-#     def create(self, validated_data):
-#         driver = DriverModel.objects.create(**validated_data)
-#         return driver
-
-
 class DriverSerializer(serializers.ModelSerializer):
-    user = UserSerializer
-    verify_driver = VerificationSerializer
-    car = CarSerializer
-
-    def create(self, validated_data):
-        user_data = validated_data.pop('driver')
-        user_serializer = UserSerializer(data=user_data)
-        user_serializer.is_valid(raise_exception=True)
-        user = user_serializer.save()
-
-        verification_data = validated_data.pop('verification')
-        verification_serializer = VerificationSerializer(data=verification_data)
-        verification_serializer.is_valid(raise_exception=True)
-        verification = verification_serializer.save()
-
-        driver = DriverModel.objects.create(user=user, verification=verification, **validated_data)
-        return driver
-
     class Meta:
         model = DriverModel
+        fields = ('id', 'username', 'password', 'name', 'car_model', 'license_number')
+    def validate_license_number(self, value):
+        existing_driver = DriverModel.objects.filter(license_number=value).first()
+        if existing_driver:
+            raise serializers.ValidationError('A driver with this license number already exists.')
+        return value
+
+    def create(self, validated_data):
+        driver = DriverModel.objects.create(**validated_data)
+        return driver
+
+
+# class DriverSerializer(serializers.ModelSerializer):
+#     user = UserSerializer
+#     verify_driver = VerificationSerializer
+#     car = CarSerializer
+#
+#     def create(self, validated_data):
+#         user_data = validated_data.pop('user')
+#         user_serializer = UserSerializer(data=user_data)
+#         user_serializer.is_valid(raise_exception=True)
+#         user = user_serializer.save()
+#
+#         verification_data = validated_data.pop('verification')
+#         verification_serializer = VerificationSerializer(data=verification_data)
+#         verification_serializer.is_valid(raise_exception=True)
+#         verification = verification_serializer.save()
+#
+#         driver = DriverModel.objects.create(user=user, verification=verification, **validated_data)
+#         return driver
+
+    # def validate_license_number(self, value):
+    #     existing_driver = DriverModel.objects.filter(license_number=value).first()
+    #     if existing_driver:
+    #         raise serializers.ValidationError('A driver with this license number already exists.')
+    #     return value
+    #
+    # class Meta:
+    #     model = DriverModel
         fields = ('id', 'username', 'password', 'name', 'car_model', 'license_number')
 
 
@@ -115,13 +120,17 @@ class DriverLoginSerializer(serializers.Serializer):
 
 
 class RideSerializer(serializers.ModelSerializer):
+    passengers = PassengerSerializer(many=True)
+
     class Meta:
         model = RideModel
         fields = ('id', 'driver', 'source', 'destination', 'departure_time')
 
     def create(self, validated_data):
-        validated_data['driver'] = self.context['request'].user
+        passengers_data = validated_data.pop('passengers')
         ride = RideModel.objects.create(**validated_data)
+        for passenger_data in passengers_data:
+            PassengerModel.objects.create(ride=ride, **passenger_data)
         return ride
 
 
