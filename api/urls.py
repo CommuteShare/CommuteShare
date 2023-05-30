@@ -10,3 +10,4 @@ urlpatterns = [
     path('ride/all/' ,CheckRiderView.as_view()),
     # path('ride/check', ride_view)
 ]
+
