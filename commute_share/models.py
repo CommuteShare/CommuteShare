@@ -1,5 +1,4 @@
 from django.utils import timezone
-
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.auth.models import AbstractUser
@@ -8,40 +7,22 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 
-class UserAdmin(AbstractUser):
-    username = models.CharField(unique=True, max_length=100)
-    first_name = models.CharField(unique=True, max_length=100)
-    last_name = models.CharField(unique=True, max_length=100)
+
+class User(AbstractUser):
     email = models.EmailField(unique=True)
     phone_number = PhoneNumberField(unique=True)
-    password = models.CharField(unique=True, max_length=100)
-
-
-class User(models.Model):
-    first_name = models.CharField(max_length=400, null=False, blank=False)
-    last_name = models.CharField(max_length=400, null=False, blank=False)
-    email = models.EmailField(blank=False, null=False)
-    phone_number = PhoneNumberField()
-    company = models.OneToOneField("CompanyModel", on_delete=models.PROTECT)
+    is_driver = models.BooleanField(default=False)
 
 
 class CompanyModel(models.Model):
     name = models.CharField(max_length=400, null=False, blank=False)
     email = models.EmailField(blank=False, null=False)
     location = models.CharField(max_length=400, null=False, blank=False)
-
-
-class PassengerModel(models.Model):
     user = models.OneToOneField(User, on_delete=models.PROTECT)
-    verification = models.OneToOneField("VerificationModel", on_delete=models.PROTECT)
-    identity_verified = models.BooleanField()
 
     def book_ride(self, ride, driver, available_seats, departure_time, price):
         if available_seats <= 0:
             raise ValidationError("Invalid number of available seats.")
-
-        if self.identity_verified is False:
-            raise ValidationError("Passenger identity is not verified.")
 
         if ride.departure_location == ride.destination_location:
             raise ValidationError("Departure and destination locations cannot be the same.")
@@ -64,6 +45,7 @@ class PassengerModel(models.Model):
             is_read=False,
             created_at=timezone.now()
         )
+        notification.save()
         book_ride.save()
         return book_ride
 
@@ -71,9 +53,10 @@ class PassengerModel(models.Model):
 class DriverModel(models.Model):
     user = models.OneToOneField(User, on_delete=models.PROTECT)
     verification = models.OneToOneField("VerificationModel", on_delete=models.PROTECT)
+    company = models.OneToOneField(CompanyModel, on_delete=models.PROTECT)
+    car = models.ForeignKey("CarModel", on_delete=models.PROTECT)
     identity_verified = models.BooleanField()
     licence_number = models.CharField(max_length=10, null=False, blank=False)
-    car = models.ForeignKey("CarModel", on_delete=models.PROTECT)
 
     def accept_ride(self, book_ride):
         if book_ride.driver != self:
@@ -103,7 +86,6 @@ class CustomerServiceModel(models.Model):
 
     ]
     user = models.OneToOneField(User, on_delete=models.PROTECT)
-    ride = models.ForeignKey("RideModel", on_delete=models.PROTECT)
     subject = models.CharField(null=False, blank=False, max_length=100)
     message = models.CharField(null=False, blank=False, max_length=100)
     response_status = models.CharField(null=False, blank=False, choices=RESPONSE_STATUS, default="closed",
@@ -122,6 +104,8 @@ class VerificationModel(models.Model):
     photograph = models.ImageField(null=False, blank=False, upload_to="images/")
     id_card_front = models.ImageField(null=False, blank=False, upload_to="id_card_front/")
     id_card_back = models.ImageField(null=False, blank=False, upload_to="id_card_back/")
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    is_verified = models.BooleanField(default=False)
 
 
 class CarModel(models.Model):
@@ -131,24 +115,9 @@ class CarModel(models.Model):
     model = models.CharField(max_length=100)
 
 
-class RideModel(models.Model):
-    departure_location = models.CharField(null=False, blank=False, max_length=1000)
-    destination_location = models.CharField(null=False, blank=False, max_length=1000)
-
-
 class BookRideModel(models.Model):
-    RIDE_STATUS = [
-        ('CONFIRMED', 'confirmed'),
-        ('PENDING', 'pending'),
-        ('CANCELLED', 'cancelled')
-    ]
-    ride = models.ForeignKey(RideModel, on_delete=models.PROTECT)
-    passengers = models.ForeignKey(PassengerModel, on_delete=models.PROTECT)
-    driver = models.ForeignKey(DriverModel, on_delete=models.PROTECT)
-    available_seats = models.IntegerField(null=False, blank=False)
-    departure_time = models.TimeField(null=False, blank=False)
-    ride_status = models.CharField(null=False, blank=False, choices=RIDE_STATUS, default='pending', max_length=1000)
-    price = models.DecimalField(max_digits=6, default=0, decimal_places=2)
+    destination_location = models.CharField(null=False, blank=False, max_length=1000)
+    create_ride = models.OneToOneField('CreateRide', on_delete=models.CASCADE)
 
 
 class PaymentModel(models.Model):
@@ -183,18 +152,8 @@ class CreateRide(models.Model):
         return f'{self.driver.user.first_name}--{self.driver.user.last_name}'
 
 
-class CheckDrivers(models.Model):
-    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
-    car_color = models.CharField(max_length=10)
-    car_plate_number = models.CharField(max_length=7, null=False, blank=False)
-    phone_number = PhoneNumberField()
-    destination_location = models.CharField(null=False, blank=False, max_length=100)
-    departure_time = models.TimeField(null=False, blank=False, max_length=100)
-    available_seats = models.IntegerField(null=False, blank=False)
-
-
 class NotificationModel(models.Model):
-    user = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
-    passenger = models.ForeignKey(PassengerModel, on_delete=models.CASCADE)
+    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     is_read = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)

@@ -26,12 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 
 # Application definition
@@ -46,9 +42,8 @@ DJANGO_APPS = [
 ]
 LOCAL_APPS = ['commute_share', 'api']
 
-
-THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary','phonenumbers','cloudinary_storage','phonenumber_field']
-
+THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary', 'phonenumbers', 'cloudinary_storage',
+               'phonenumber_field']
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
 
@@ -87,18 +82,6 @@ WSGI_APPLICATION = 'share_config.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': m_secrets.DB_NAME,
-        'USER': m_secrets.DB_USER,
-        'PASSWORD': m_secrets.DB_PASSWORD,
-        'HOST': m_secrets.DB_HOST,
-        'PORT': m_secrets.DB_PORT,
-
-    }
-}
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -132,13 +115,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, '../../staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = "commute_share.UserAdmin"
+AUTH_USER_MODEL = "commute_share.User"
 
 INTERNAL_IPS = ["127.0.0.1", ]
 
@@ -181,9 +164,38 @@ CLOUDINARY_STORAGE = {
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-
-
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 #
 # django_heroku.settings(locals())
 
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler'
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'general.log',
+            'formatter': 'verbose'
+        }
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', 'file'],
+            'level': os.environ.get('DJANGO_LOG_LEVEL', 'INFO')
+        }
+    },
+    'formatters': {
+        'verbose': {
+            'format': '{asctime} ({levelname}) - {name} - {message}',
+            'style': '{'
+        }
+    }
+}
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': lambda request: True
+}
