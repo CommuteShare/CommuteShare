@@ -27,39 +27,6 @@ class PassengerSignUpView(generics.CreateAPIView):
     permission_classes = [IsUser]
 
 
-# class DriverRegistrationView(generics.CreateAPIView):
-#     serializer_class = DriverSerializer
-#
-#     def post(self, request, *args, **kwargs):
-#         serializer = self.get_serializer(data=request.data)
-#         serializer.is_valid(raise_exception=True)
-#         self.perform_create(serializer)
-#         headers = self.get_success_headers(serializer.data)
-#         return Response({
-#             'message': 'Driver registered successfully.',
-#             'data': serializer.data
-#         }, status=201, headers=headers)
-#
-#     def perform_create(self, serializer):
-#         serializer.save()
-
-
-# class DriverLoginView(generics.GenericAPIView):
-#     serializer_class = DriverLoginSerializer
-#
-#     def post(self, request, *args, **kwargs):
-#         serializer = self.get_serializer(data=request.data)
-#         serializer.is_valid(raise_exception=True)
-#         driver = serializer.validated_data
-#         token, _ = Token.objects.get_or_create(user=driver)
-#         return Response({'token': token.key})
-
-
-# class RideCreateView(generics.CreateAPIView):
-#     serializer_class = RideSerializer
-#     # permission_classes = [IsAuthenticated]
-
-
 class CreateRideView(APIView):
     def post(self, request):
         serializer = RideSerializer(data=request.data)

@@ -10,11 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
-<<<<<<< HEAD
-=======
-
-import m_secrets
->>>>>>> 73a749736cdc335b5e8921c0a9e0d15ae07a3ec5
 from pathlib import Path
 from datetime import timedelta
 import phonenumber_field
@@ -35,8 +30,6 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = []
-
-
 # Application definition
 
 DJANGO_APPS = [
@@ -49,7 +42,8 @@ DJANGO_APPS = [
 ]
 LOCAL_APPS = ['commute_share', 'api']
 
-THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary','phonenumbers','cloudinary_storage','phonenumber_field']
+THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser',
+               'cloudinary', 'cloudinary_storage', 'phonenumbers', 'gunicorn']
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
 
@@ -90,6 +84,7 @@ WSGI_APPLICATION = 'share_config.wsgi.application'
 
 DATABASES = {
     'default': {
+
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('DB_USER'),
@@ -185,6 +180,6 @@ CLOUDINARY_STORAGE = {
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+
 # API_KEY = os.getenv('API_KEY')
 # API_SECRET = os.getenv('SECRET_KEY')
-
