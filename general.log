@@ -1548,3 +1548,538 @@ TypeError: django.db.models.query.QuerySet.create() got multiple values for keyw
 2023-05-31 14:08:38,667 (WARNING) - django.request - Bad Request: /api/driver_profile/
 2023-05-31 17:16:46,160 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
 2023-05-31 17:16:48,398 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 17:50:43,515 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 17:59:33,219 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-05-31 17:59:58,002 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 18:01:27,399 (WARNING) - django.request - Bad Request: /api/driver_profile/
+2023-05-31 18:07:48,374 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 18:09:12,658 (WARNING) - django.request - Bad Request: /api/driver_profile/
+2023-05-31 18:10:48,531 (WARNING) - django.request - Bad Request: /api/driver_profile/
+2023-05-31 18:10:55,428 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-05-31 18:12:19,066 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 18:14:17,153 (WARNING) - django.request - Bad Request: /api/driver_profile/
+2023-05-31 18:14:17,454 (WARNING) - django.request - Bad Request: /api/driver_profile/
+2023-05-31 18:27:46,489 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\urls.py changed, reloading.
+2023-05-31 18:28:43,246 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 18:47:13,443 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 18:47:44,420 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-05-31 18:47:57,031 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 18:54:43,007 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 18:57:51,756 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 18:59:46,770 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 19:01:11,816 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\urls.py changed, reloading.
+2023-05-31 19:01:31,774 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 05:27:11,203 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\urls.py changed, reloading.
+2023-06-01 05:27:13,712 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 05:37:54,869 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 05:37:56,317 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 05:41:07,248 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 05:59:59,855 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:00:10,871 (WARNING) - django.request - Not Found: /api/
+2023-06-01 06:05:19,147 (WARNING) - django.request - Not Found: /api/verification
+2023-06-01 06:06:37,025 (WARNING) - django.request - Not Found: /api/driver_view/
+2023-06-01 06:06:46,175 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-01 06:11:35,921 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 06:11:38,371 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:11:39,929 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-01 06:12:27,260 (WARNING) - django.request - Bad Request: /api/driver_profile/
+2023-06-01 06:13:44,372 (WARNING) - django.request - Not Found: /api/create_ride
+2023-06-01 06:13:48,736 (WARNING) - django.request - Not Found: /api/ride/check/
+2023-06-01 06:13:56,425 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 06:18:45,731 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:18:47,683 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:18:51,564 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 06:20:09,996 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:20:12,423 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:22:33,222 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:22:34,828 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:22:36,446 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 06:23:49,043 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:23:52,318 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:23:54,725 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 06:24:33,559 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:24:36,076 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:24:37,700 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 06:28:44,262 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:28:48,590 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:29:01,765 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 06:29:21,653 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:29:23,495 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:29:25,264 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 06:29:25,268 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 06:29:48,481 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:29:50,279 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:29:52,044 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 06:30:01,963 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:30:04,220 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 06:30:05,786 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 06:31:47,434 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 06:31:51,083 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:21:42,484 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:21:45,282 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:22:50,918 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:22:52,744 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:25:08,998 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:25:10,587 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:25:39,070 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:25:40,581 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:25:56,252 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 09:28:15,692 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 09:28:17,150 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:33:13,118 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:33:20,585 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 09:33:31,703 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:34:06,099 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:34:46,220 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:34:47,683 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:35:18,684 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:35:22,918 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:36:17,344 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-01 09:36:19,660 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-01 09:42:02,723 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:42:16,349 (WARNING) - django.request - Not Found: /
+2023-06-01 09:42:24,604 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-01 09:44:24,659 (WARNING) - django.request - Not Found: /api/
+2023-06-01 09:44:57,885 (WARNING) - django.request - Not Found: /api/verrification
+2023-06-01 09:45:04,208 (WARNING) - django.request - Not Found: /api/verification
+2023-06-01 09:45:29,933 (WARNING) - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)'))': /v1_1/del9lwv3z/image/upload
+2023-06-01 09:45:30,133 (WARNING) - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)'))': /v1_1/del9lwv3z/image/upload
+2023-06-01 09:45:30,327 (WARNING) - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)'))': /v1_1/del9lwv3z/image/upload
+2023-06-01 09:45:32,602 (ERROR) - django.request - Internal Server Error: /api/verifications/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\api_client\tcp_keep_alive_manager.py", line 74, in _validate_conn
+    super(TCPKeepAliveHTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\util\ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\util\ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1007)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\uploader.py", line 539, in call_api
+    response = _http.request("POST", api_url, param_list, headers, **kw)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\request.py", line 78, in request
+    return self.request_encode_body(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 826, in urlopen
+    return self.urlopen(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 826, in urlopen
+    return self.urlopen(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 826, in urlopen
+    return self.urlopen(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: TCPKeepAliveHTTPSConnectionPool(host='api.cloudinary.com', port=443): Max retries exceeded with url: /v1_1/del9lwv3z/image/upload (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1819, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1743, in as_sql
+    value_rows = [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1744, in <listcomp>
+    [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1745, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1693, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\fields\files.py", line 317, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\fields\files.py", line 93, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\files\storage\base.py", line 38, in save
+    name = self._save(name, content)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary_storage\storage.py", line 68, in _save
+    response = self._upload(name, content)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary_storage\storage.py", line 62, in _upload
+    return cloudinary.uploader.upload(content, **options)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\uploader.py", line 50, in upload
+    return call_cacheable_api("upload", params, file=file, **options)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\uploader.py", line 467, in call_cacheable_api
+    result = call_api(action, params, http_headers, return_error, unsigned, file, timeout, **options)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\uploader.py", line 541, in call_api
+    raise Error("Unexpected error - {0!r}".format(e))
+cloudinary.exceptions.Error: Unexpected error - MaxRetryError("TCPKeepAliveHTTPSConnectionPool(host='api.cloudinary.com', port=443): Max retries exceeded with url: /v1_1/del9lwv3z/image/upload (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)')))")
+2023-06-01 09:48:09,386 (WARNING) - django.request - Bad Request: /api/verifications/
+2023-06-01 09:49:30,105 (WARNING) - django.request - Not Found: /api/ride/check/
+2023-06-01 09:49:35,360 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:50:57,703 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 09:51:00,740 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:51:02,821 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:51:39,265 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:51:41,749 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:51:44,869 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:52:25,746 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:52:27,460 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:52:28,421 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 654, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 562, in get_raw_data_form
+    data = serializer.data.copy()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `n_price` is not valid for model `CreateRide`.
+2023-06-01 09:52:37,950 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:52:39,898 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:52:41,538 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:53:25,891 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:53:31,364 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 09:53:37,956 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:54:11,101 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:54:13,143 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:54:14,876 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:54:15,899 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 09:54:26,390 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:54:28,638 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:54:30,766 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:54:33,445 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:56:16,330 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:56:17,910 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:56:19,446 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:56:26,332 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:56:54,448 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:57:43,081 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:57:44,700 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:57:45,681 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 654, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 562, in get_raw_data_form
+    data = serializer.data.copy()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `n_price` is not valid for model `CreateRide`.
+2023-06-01 09:57:56,401 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:57:58,546 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:58:00,250 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 09:58:31,293 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:58:32,996 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:59:47,395 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 09:59:52,276 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 09:59:53,361 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 654, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 562, in get_raw_data_form
+    data = serializer.data.copy()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `discount` is not valid for model `CreateRide`.
+2023-06-01 10:00:03,224 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 10:00:04,911 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 10:00:05,971 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 654, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 562, in get_raw_data_form
+    data = serializer.data.copy()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `discount_price` is not valid for model `CreateRide`.
+2023-06-01 10:00:22,889 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 10:00:25,819 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 10:00:27,836 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 10:01:36,003 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 10:01:38,260 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 10:04:39,063 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 10:04:43,030 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 10:06:21,085 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 10:06:23,701 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 10:57:10,887 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 10:57:13,939 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 10:57:36,898 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 10:57:53,044 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 10:57:57,031 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 10:57:59,903 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-01 10:59:05,539 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-01 11:03:37,071 (WARNING) - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)'))': /v1_1/del9lwv3z/image/upload
+2023-06-01 11:03:37,106 (WARNING) - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)'))': /v1_1/del9lwv3z/image/upload
+2023-06-01 11:03:37,138 (WARNING) - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)'))': /v1_1/del9lwv3z/image/upload
+2023-06-01 11:03:39,921 (ERROR) - django.request - Internal Server Error: /api/verifications/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\api_client\tcp_keep_alive_manager.py", line 74, in _validate_conn
+    super(TCPKeepAliveHTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\util\ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\util\ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1007)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\uploader.py", line 539, in call_api
+    response = _http.request("POST", api_url, param_list, headers, **kw)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\request.py", line 78, in request
+    return self.request_encode_body(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 826, in urlopen
+    return self.urlopen(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 826, in urlopen
+    return self.urlopen(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 826, in urlopen
+    return self.urlopen(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: TCPKeepAliveHTTPSConnectionPool(host='api.cloudinary.com', port=443): Max retries exceeded with url: /v1_1/del9lwv3z/image/upload (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1819, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1743, in as_sql
+    value_rows = [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1744, in <listcomp>
+    [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1745, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1693, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\fields\files.py", line 317, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\fields\files.py", line 93, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\files\storage\base.py", line 38, in save
+    name = self._save(name, content)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary_storage\storage.py", line 68, in _save
+    response = self._upload(name, content)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary_storage\storage.py", line 62, in _upload
+    return cloudinary.uploader.upload(content, **options)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\uploader.py", line 50, in upload
+    return call_cacheable_api("upload", params, file=file, **options)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\uploader.py", line 467, in call_cacheable_api
+    result = call_api(action, params, http_headers, return_error, unsigned, file, timeout, **options)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\cloudinary\uploader.py", line 541, in call_api
+    raise Error("Unexpected error - {0!r}".format(e))
+cloudinary.exceptions.Error: Unexpected error - MaxRetryError("TCPKeepAliveHTTPSConnectionPool(host='api.cloudinary.com', port=443): Max retries exceeded with url: /v1_1/del9lwv3z/image/upload (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1007)')))")
+2023-06-01 11:05:28,622 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 11:05:39,645 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-01 11:06:09,688 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 11:07:17,486 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-01 11:09:38,409 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 11:10:06,843 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 11:10:22,198 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 11:10:31,438 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 11:10:47,925 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 11:10:54,025 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 11:11:04,337 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 11:11:12,553 (WARNING) - django.request - Bad Request: /api/ride/create/

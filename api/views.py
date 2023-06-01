@@ -23,9 +23,25 @@ class DriverSignUpView(generics.CreateAPIView):
     # permission_classes = [IsAuthenticated]
 
 
+class CarDetailView(ModelViewSet):
+    queryset = CarModel.objects.all()
+    serializer_class = CarSerializer
+
+
+class VerificationDetailView(ModelViewSet):
+    queryset = VerificationModel.objects.all()
+    serializer_class = VerificationSerializer
+
+
+class CompanyDetailView(ModelViewSet):
+    queryset = CompanyModel.objects.all()
+    serializer_class = CompanySerializer
+
+
 class CreateRideView(generics.CreateAPIView):
     queryset = CreateRide.objects.all()
     serializer_class = CreateRideSerializer
+
     #
 # class RideCreateView(generics.CreateAPIView):
 #     serializer_class = CreateRideSerializer

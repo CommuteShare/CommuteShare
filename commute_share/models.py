@@ -5,6 +5,7 @@ from django.contrib.auth.models import AbstractUser
 from phonenumber_field.modelfields import PhoneNumberField
 
 
+
 # Create your models here.
 
 
@@ -19,6 +20,9 @@ class CompanyModel(models.Model):
     email = models.EmailField(blank=False, null=False)
     location = models.CharField(max_length=400, null=False, blank=False)
     user = models.OneToOneField(User, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return f"{self.name}    "
 
     def book_ride(self, ride, driver, available_seats, departure_time, price):
         if available_seats <= 0:
@@ -56,7 +60,7 @@ class DriverModel(models.Model):
     company = models.OneToOneField(CompanyModel, on_delete=models.PROTECT)
     car = models.ForeignKey("CarModel", on_delete=models.PROTECT)
     identity_verified = models.BooleanField()
-    licence_number = models.CharField(max_length=10, null=False, blank=False)
+    licence_number = models.CharField(unique=True, max_length=10, null=False, blank=False)
 
     def accept_ride(self, book_ride):
         if book_ride.driver != self:
@@ -68,6 +72,24 @@ class DriverModel(models.Model):
         notification = NotificationModel.objects.get(user=self, passenger=book_ride.passengers)
         notification.is_read = True
         notification.save()
+
+        return book_ride
+
+    def start_ride(self, book_ride):
+        if book_ride.driver != self:
+            raise ValidationError("This ride does not belong to you.")
+
+        book_ride.ride_status = 'IN_PROGRESS'
+        book_ride.save()
+
+        return book_ride
+
+    def end_ride(self, book_ride):
+        if book_ride.driver != self:
+            raise ValidationError("This ride does not belong to you.")
+
+        book_ride.ride_status = 'COMPLETED'
+        book_ride.save()
 
         return book_ride
 
@@ -107,12 +129,18 @@ class VerificationModel(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     is_verified = models.BooleanField(default=False)
 
+    def __str__(self):
+        return "Identity Verified"
+
 
 class CarModel(models.Model):
-    license_plate_number = models.CharField(max_length=7, null=False, blank=False)
-    identification_number = models.CharField(max_length=17, null=False, blank=False)
+    license_plate_number = models.CharField(unique=True, max_length=7, null=False, blank=False)
+    identification_number = models.CharField(unique=True, max_length=17, null=False, blank=False)
     color = models.CharField(null=False, blank=False, max_length=100)
     model = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.model} -- {self.color}"
 
 
 class BookRideModel(models.Model):
@@ -144,6 +172,7 @@ class CreateRide(models.Model):
     destination_location = models.CharField(null=False, blank=False, max_length=100)
     departure_time = models.TimeField(null=False, blank=False, max_length=100)
     available_seats = models.IntegerField(null=False, blank=False)
+    price = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False, default= 0 )
 
     def check_ride(self, destination_location):
         return CreateRide.objects.filter(destination_location=destination_location)
