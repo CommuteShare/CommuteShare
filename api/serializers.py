@@ -57,5 +57,13 @@ class BookRideSerializer(serializers.ModelSerializer):
 class CheckRide(serializers.Serializer):
     destination_location = serializers.CharField()
 
-    class Meta:
-        fields = ['destination_location']
+    def create(self, validated_data):
+        destination_location = validated_data.get('destination_location')
+
+        check = CreateRide.objects.filter(destination_location=destination_location)
+        for ride in check:
+            BookRideModel.objects.create(ride)
+
+        return {
+            'destination_location': destination_location
+        }
