@@ -42,6 +42,13 @@ class CreateRideView(generics.CreateAPIView):
     queryset = CreateRide.objects.all()
     serializer_class = CreateRideSerializer
 
+
+class BookRideView(ModelViewSet):
+    serializer_class = BookRideSerializer
+    queryset = BookRideModel.objects.all()
+
+
+
     #
 # class RideCreateView(generics.CreateAPIView):
 #     serializer_class = CreateRideSerializer

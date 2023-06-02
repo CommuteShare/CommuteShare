@@ -14,8 +14,6 @@ import os
 import m_secrets
 from pathlib import Path
 from datetime import timedelta
-import phonenumber_field
-import cloudinary_storage
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -42,12 +40,14 @@ DJANGO_APPS = [
 ]
 LOCAL_APPS = ['commute_share', 'api']
 
-THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary', 'phonenumbers', 'cloudinary_storage',
-               'phonenumber_field']
+THIRD_PARTY = ['rest_framework_simplejwt.token_blacklist', 'rest_framework', 'debug_toolbar', 'djoser', 'cloudinary',
+               'phonenumbers', 'cloudinary_storage',
+               'phonenumber_field', 'corsheaders']
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -131,6 +131,11 @@ INTERNAL_IPS = ["127.0.0.1", ]
 # }
 
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    # "http://127.0.0.1:9000",
+]
+
 REST_FRAMEWORK = {
     # 'COERCE_DECIMAL_TO_STRING': False,
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
@@ -146,7 +151,32 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=1)
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=90),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'UPDATE_LAST_LOGIN': False,
+
+    'ALGORITHM': 'HS256',
+    'VERIFYING_KEY': None,
+    'AUDIENCE': None,
+    'ISSUER': None,
+    'JWK_URL': None,
+    'LEEWAY': 0,
+
+    'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+    'USER_AUTHENTICATION_RULE': 'rest_framework_simplejwt.authentication.default_user_authentication_rule',
+
+    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+    'TOKEN_TYPE_CLAIM': 'token_type',
+
+    'JTI_CLAIM': 'jti',
+
+    'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
+    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
 DJOSER = {

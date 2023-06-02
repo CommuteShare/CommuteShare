@@ -2083,3 +2083,73 @@ cloudinary.exceptions.Error: Unexpected error - MaxRetryError("TCPKeepAliveHTTPS
 2023-06-01 11:10:54,025 (WARNING) - django.request - Bad Request: /api/ride/create/
 2023-06-01 11:11:04,337 (WARNING) - django.request - Bad Request: /api/ride/create/
 2023-06-01 11:11:12,553 (WARNING) - django.request - Bad Request: /api/ride/create/
+2023-06-01 13:31:45,169 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 13:32:18,585 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-01 13:32:21,073 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 13:32:22,442 (WARNING) - django.request - Not Found: /api/book_ride
+2023-06-01 13:35:19,929 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 13:35:23,093 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 13:36:49,180 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 13:36:52,740 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 13:43:27,414 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-01 13:43:30,067 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 13:47:43,147 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-01 13:47:45,831 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 13:49:02,007 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-01 13:49:03,552 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 13:53:05,990 (WARNING) - django.request - Bad Request: /auth/users/
+2023-06-01 13:53:29,552 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-01 13:57:15,431 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 723, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 654, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\renderers.py", line 562, in get_raw_data_form
+    data = serializer.data.copy()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `discount_price` is not valid for model `CreateRide`.
+2023-06-01 13:57:58,676 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 13:58:02,020 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 13:59:15,548 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 13:59:17,398 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 13:59:19,288 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-01 14:00:29,255 (WARNING) - django.request - Bad Request: /api/companies/
+2023-06-01 14:16:33,375 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 14:17:05,996 (WARNING) - django.request - Unauthorized: /api/cars/
+2023-06-01 14:17:18,299 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-01 14:17:50,067 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-01 14:20:16,614 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-01 14:20:19,621 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 14:23:02,809 (WARNING) - django.request - Bad Request: /auth/users/
+2023-06-01 14:25:34,035 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-01 14:25:36,619 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 14:38:35,812 (WARNING) - django.request - Bad Request: /api/cars/
+2023-06-01 17:13:19,444 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-01 17:15:49,024 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-01 17:17:24,840 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-01 17:24:47,060 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\share_config\settings\common.py changed, reloading.
+2023-06-01 17:24:50,194 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader

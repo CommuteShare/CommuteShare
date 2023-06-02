@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from phonenumber_field.modelfields import PhoneNumberField
-
+import random
 
 
 # Create your models here.
@@ -134,6 +134,7 @@ class VerificationModel(models.Model):
 
 
 class CarModel(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     license_plate_number = models.CharField(unique=True, max_length=7, null=False, blank=False)
     identification_number = models.CharField(unique=True, max_length=17, null=False, blank=False)
     color = models.CharField(null=False, blank=False, max_length=100)
@@ -144,6 +145,11 @@ class CarModel(models.Model):
 
 
 class BookRideModel(models.Model):
+    BOOK_RIDE_STATUS = [
+        ('CONFIRMED', 'confirmed'),
+        ('PENDING', 'pending'),
+        ('CANCELED', 'canceled')
+    ]
     destination_location = models.CharField(null=False, blank=False, max_length=1000)
     create_ride = models.OneToOneField('CreateRide', on_delete=models.CASCADE)
 
@@ -172,13 +178,13 @@ class CreateRide(models.Model):
     destination_location = models.CharField(null=False, blank=False, max_length=100)
     departure_time = models.TimeField(null=False, blank=False, max_length=100)
     available_seats = models.IntegerField(null=False, blank=False)
-    price = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False, default= 0 )
+    price = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False, default=0)
 
     def check_ride(self, destination_location):
         return CreateRide.objects.filter(destination_location=destination_location)
 
     def __str__(self):
-        return f'{self.driver.user.first_name}--{self.driver.user.last_name}'
+        return f'{self.driver.user.first_name}--{self.driver.user.last_name} --- {self.driver.car.model}--- {self.driver.car.color}'
 
 
 class NotificationModel(models.Model):

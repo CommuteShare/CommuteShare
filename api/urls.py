@@ -5,7 +5,8 @@ from .views import *
 router = routers.SimpleRouter()
 router.register("cars", CarDetailView, basename="cars")
 router.register("companies", CompanyDetailView, basename="companies")
-router.register("verifications", VerificationDetailView,  basename="verifications")
+router.register("verifications", VerificationDetailView, basename="verifications")
+router.register('book_rides', BookRideView)
 
 urlpatterns = [
     path('', include(router.urls)),

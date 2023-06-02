@@ -17,6 +17,7 @@ heroku = "*"
 django-heroku = "*"
 dj-database-url = "*"
 awsebcli = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
