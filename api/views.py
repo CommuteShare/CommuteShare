@@ -44,39 +44,45 @@ class CreateRideView(generics.CreateAPIView):
 
 
 class BookRideView(ModelViewSet):
-    serializer_class = BookRideSerializer
-    queryset = BookRideModel.objects.all()
+    serializer_class = BooksSerializer
+    queryset = Books.objects.all()
 
 
+class CheckRideView(ModelViewSet):
+    queryset = CreateRide.objects.all()
+    serializer_class = CheckRide
 
-    #
-# class RideCreateView(generics.CreateAPIView):
-#     serializer_class = CreateRideSerializer
-#     permission_classes = [IsUser]
-#
-#
-# class RideView(generics.ListCreateAPIView):
-#     serializer_class = RideSerializer
-#     queryset = RideModel.objects.all()
-#
-#     def perform_create(self, serializer):
-#         departure_location = self.request.data.get('departure_location')
-#         destination_location = self.request.data.get('destination_location')
-#         rides = CreateRide.objects.filter(destination_location=destination_location)
-#
-#         for ride in rides:
-#             driver = ride.driver
-#
-#             check_rider = CheckDrivers(driver=driver, car_color=driver.car.color,
-#                                        car_plate_number=driver.car.license_plate_number,
-#                                        phone_number=driver.user.phone_number,
-#                                        destination_location=destination_location, departure_time=ride.departure_time,
-#                                        available_seats=ride.available_seats)
-#             check_rider.save()
-#
-#         serializer.save(departure_location=departure_location, destination_location=destination_location)
-#
-#
-# class CheckRiderView(generics.ListAPIView):
-#     serializer_class = CheckDriverSerializer
-#     queryset = CheckDrivers.objects.all()
+    def create(self, request, *args, **kwargs):
+        data = request.data  # Get the request data
+
+        # Ensure the data is in the expected dictionary format
+        if not isinstance(data, dict):
+            return Response({"non_field_errors": ["Invalid data. Expected a dictionary."]}, status=status.HTTP_400_BAD_REQUEST)
+
+        serializer = self.get_serializer(data=data)
+        serializer.is_valid(raise_exception=True)
+
+        destination_location = serializer.validated_data.get('destination_location')
+
+        check = CreateRide.objects.filter(destination_location=destination_location)
+
+        for ride in check:
+            Books.objects.create(
+                driver=ride.driver,
+                departure_location=ride.departure_location,
+                destination_location=ride.destination_location,
+                departure_time=ride.departure_time,
+                available_seats=ride.available_seats,
+                price=ride.price
+            )
+
+            books_serializer = BooksSerializer(data=ride)
+            books_serializer.is_valid(raise_exception=True)
+            books_serializer.save()
+
+        return Response({"destination_location": destination_location}, status=status.HTTP_200_OK)
+
+
+class ChecksView(ModelViewSet):
+    queryset = Checks.objects.all()
+    serializer_class = ChecksSerializer

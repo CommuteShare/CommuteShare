@@ -192,3 +192,19 @@ class NotificationModel(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     is_read = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class Books(models.Model):
+    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
+    departure_location = models.CharField(null=False, blank=False, max_length=1000)
+    destination_location = models.CharField(null=False, blank=False, max_length=100)
+    departure_time = models.TimeField(null=False, blank=False, max_length=100)
+    available_seats = models.IntegerField(null=False, blank=False, default=0)
+    price = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False, default=0)
+
+    def __str__(self):
+        return f'{self.driver.user.first_name}--{self.driver.user.last_name} --- {self.driver.car.model}--- {self.driver.car.color}'
+
+
+class Checks(models.Model):
+    books = models.OneToOneField(Books, on_delete=models.CASCADE)
