@@ -1,3 +1,5 @@
+from abc import ABC
+
 from rest_framework import serializers
 from commute_share.models import *
 from phonenumber_field.serializerfields import PhoneNumberField
@@ -10,7 +12,7 @@ import random
 class CarSerializer(serializers.ModelSerializer):
     class Meta:
         model = CarModel
-        fields = ['license_plate_number', 'identification_number', 'color', 'model']
+        fields = ['user', 'license_plate_number', 'identification_number', 'color', 'model']
 
 
 class CompanySerializer(serializers.ModelSerializer):
@@ -42,15 +44,29 @@ class CreateRideSerializer(serializers.ModelSerializer):
     class Meta:
         model = CreateRide
         fields = ['driver', 'departure_location', 'destination_location', 'departure_time',
-                  'available_seats', 'price', 'discount_price']
-
-    discount_price = serializers.SerializerMethodField(method_name='discount')
-
-    def discount(self, book: CreateRide):
-        return
+                  'available_seats', 'price']
 
 
 class BookRideSerializer(serializers.ModelSerializer):
     class Meta:
         model = BookRideModel
         fields = ['destination_location', 'create_ride']
+
+
+class CheckRide(serializers.Serializer):
+    destination_location = serializers.CharField()
+
+
+class BooksSerializer(serializers.ModelSerializer):
+    create_ride = CreateRide
+
+    class Meta:
+        model = Books
+        fields = "__all__"
+
+
+class ChecksSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Checks
+        fields = "__all__"
+

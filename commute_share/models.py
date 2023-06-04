@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from phonenumber_field.modelfields import PhoneNumberField
-
+import random
 
 # Create your models here.
 
@@ -167,18 +167,21 @@ class CreateRide(models.Model):
     departure_time = models.TimeField(null=False, blank=False, max_length=100)
     available_seats = models.IntegerField(null=False, blank=False)
     price = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False, default=0)
+<<<<<<< HEAD
 
     def check_ride(self, destination_location):
         return CreateRide.objects.filter(destination_location=destination_location)
 
     def __str__(self):
         return f'{self.driver.user.first_name}--{self.driver.user.last_name}'
+=======
+>>>>>>> aece57c62075882e887e9383744749aef1908d9c
 
     def check_ride(self, destination_location):
         return CreateRide.objects.filter(destination_location=destination_location)
 
     def __str__(self):
-        return f'{self.driver.user.first_name}--{self.driver.user.last_name}'
+        return f'{self.driver.user.first_name}--{self.driver.user.last_name} --- {self.driver.car.model}--- {self.driver.car.color}'
 
 
 class NotificationModel(models.Model):
@@ -186,3 +189,19 @@ class NotificationModel(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     is_read = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class Books(models.Model):
+    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
+    departure_location = models.CharField(null=False, blank=False, max_length=1000)
+    destination_location = models.CharField(null=False, blank=False, max_length=100)
+    departure_time = models.TimeField(null=False, blank=False, max_length=100)
+    available_seats = models.IntegerField(null=False, blank=False, default=0)
+    price = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False, default=0)
+
+    def __str__(self):
+        return f'{self.driver.user.first_name}--{self.driver.user.last_name} --- {self.driver.car.model}--- {self.driver.car.color}'
+
+
+class Checks(models.Model):
+    books = models.OneToOneField(Books, on_delete=models.CASCADE)
