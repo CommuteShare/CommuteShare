@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3585cf718870437202c1b4fdfc8e1d1cb6f79783
 <module type="PYTHON_MODULE" version="4">
   <component name="FacetManager">
     <facet type="django" name="Django">
@@ -16,16 +19,20 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.10" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 =======
+=======
+>>>>>>> 3585cf718870437202c1b4fdfc8e1d1cb6f79783
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="modifyBaseFiles" value="true" />
   </component>
+<<<<<<< HEAD
 >>>>>>> 73a749736cdc335b5e8921c0a9e0d15ae07a3ec5
 =======
 <module version="4">
@@ -33,6 +40,8 @@
     <option name="versionSpecifier" value="Strong equality (==x.y.z)" />
   </component>
 >>>>>>> 4d5e6f507b985955032fdc122a282fcd95df8f36
+=======
+>>>>>>> 3585cf718870437202c1b4fdfc8e1d1cb6f79783
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />
     <option name="myDocStringFormat" value="Plain" />

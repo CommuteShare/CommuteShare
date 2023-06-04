@@ -2,11 +2,12 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.exceptions import PermissionDenied
 from rest_framework.viewsets import ModelViewSet
-
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated
+from rest_framework import generics, status
+from rest_framework.response import Response
 from rest_framework import generics, status
 from rest_framework.response import Response
 from .serializers import *
@@ -15,74 +16,82 @@ from .permissions import *
 from rest_framework.views import APIView
 
 
-class DriverRegistrationView(generics.CreateAPIView):
-    serializer_class = DriverSerializer
-    queryset = DriverModel.objects.all()
-    permission_classes = [IsUser]
-
-
-class PassengerSignUpView(generics.CreateAPIView):
-    queryset = PassengerModel.objects.all()
-    serializer_class = PassengerSerializer
-    permission_classes = [IsUser]
-
-
-class CreateRideView(APIView):
-    def post(self, request):
-        serializer = RideSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=201)
-        return Response(serializer.errors, status=400)
-
-
-class BookRideView(APIView):
-    def post(self, request):
-        serializer = PassengerSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=201)
-        return Response(serializer.errors, status=400)
-
-    def get(self, request):
-        rides = RideModel.objects.all()
-        serializer = RideSerializer(rides, many=True)
-        return Response(serializer.data)
-
-
 class DriverSignUpView(generics.CreateAPIView):
     queryset = DriverModel.objects.all()
     serializer_class = DriverSerializer
-    permission_classes = [IsUser]
+    # permission_classes = [IsAuthenticated]
 
 
-class RideCreateView(generics.CreateAPIView):
+class CarDetailView(ModelViewSet):
+    queryset = CarModel.objects.all()
+    serializer_class = CarSerializer
+
+
+class VerificationDetailView(ModelViewSet):
+    queryset = VerificationModel.objects.all()
+    serializer_class = VerificationSerializer
+
+
+class CompanyDetailView(ModelViewSet):
+    queryset = CompanyModel.objects.all()
+    serializer_class = CompanySerializer
+
+
+class CreateRideView(generics.CreateAPIView):
+    queryset = CreateRide.objects.all()
     serializer_class = CreateRideSerializer
-    permission_classes = [IsUser]
 
 
-class RideView(generics.ListCreateAPIView):
-    serializer_class = RideSerializer
-    queryset = RideModel.objects.all()
+class AcceptRideView(APIView):
+    def post(self, request):
+        driver = DriverModel.objects.get(user=request.user)
+        book_ride_id = request.data.get('book_ride_id')
 
-    def perform_create(self, serializer):
-        departure_location = self.request.data.get('departure_location')
-        destination_location = self.request.data.get('destination_location')
-        rides = CreateRide.objects.filter(destination_location=destination_location)
+        try:
+            book_ride = BookRideModel.objects.get(id=book_ride_id, driver=driver)
+        except BookRideModel.DoesNotExist:
+            return Response({'detail': 'Book ride not found.'}, status=status.HTTP_404_NOT_FOUND)
 
-        for ride in rides:
-            driver = ride.driver
+        book_ride.ride_status = 'CONFIRMED'
+        book_ride.save()
 
-            check_rider = CheckDrivers(driver=driver, car_color=driver.car.color,
-                                       car_plate_number=driver.car.license_plate_number,
-                                       phone_number=driver.user.phone_number,
-                                       destination_location=destination_location, departure_time=ride.departure_time,
-                                       available_seats=ride.available_seats)
-            check_rider.save()
+        notification = NotificationModel.objects.get(user=driver.user, passenger=book_ride.passengers)
+        notification.is_read = True
+        notification.save()
 
-        serializer.save(departure_location=departure_location, destination_location=destination_location)
+        serializer = BookRideSerializer(book_ride)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-class CheckRiderView(generics.ListAPIView):
-    serializer_class = CheckDriverSerializer
-    queryset = CheckDrivers.objects.all()
+class StartRideView(APIView):
+    def post(self, request,):
+        driver = DriverModel.objects.get(user=request.user)
+        book_ride_id = request.data.get('book_ride_id')
+
+        try:
+            book_ride = BookRideModel.objects.get(id=book_ride_id, driver=driver)
+        except BookRideModel.DoesNotExist:
+            return Response({'detail': 'Book ride not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        book_ride.ride_status = 'IN_PROGRESS'
+        book_ride.save()
+
+        serializer = BookRideSerializer(book_ride)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class EndRideView(APIView):
+    def post(self, request):
+        driver = DriverModel.objects.get(user=request.user)
+        book_ride_id = request.data.get('book_ride_id')
+
+        try:
+            book_ride = BookRideModel.objects.get(id=book_ride_id, driver=driver)
+        except BookRideModel.DoesNotExist:
+            return Response({'detail': 'Book ride not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        book_ride.ride_status = 'COMPLETED'
+        book_ride.save()
+
+        serializer = BookRideSerializer(book_ride)
+        return Response(serializer.data, status=status.HTTP_200_OK)
