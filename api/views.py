@@ -11,12 +11,6 @@ from commute_share.models import *
 from .permissions import *
 
 
-# class PassengerCreateProfile(generics.CreateAPIView):
-#     queryset = UserProfile.objects.all()
-#     serializer_class = UserProfileSerializer
-# permission_classes = [IsUser]
-
-
 class DriverSignUpView(generics.CreateAPIView):
     queryset = DriverModel.objects.all()
     serializer_class = DriverSerializer
@@ -53,11 +47,7 @@ class CheckRideView(ModelViewSet):
     serializer_class = CheckRide
 
     def create(self, request, *args, **kwargs):
-        data = request.data  # Get the request data
-
-        # Ensure the data is in the expected dictionary format
-        if not isinstance(data, dict):
-            return Response({"non_field_errors": ["Invalid data. Expected a dictionary."]}, status=status.HTTP_400_BAD_REQUEST)
+        data = request.data
 
         serializer = self.get_serializer(data=data)
         serializer.is_valid(raise_exception=True)
@@ -65,6 +55,7 @@ class CheckRideView(ModelViewSet):
         destination_location = serializer.validated_data.get('destination_location')
 
         check = CreateRide.objects.filter(destination_location=destination_location)
+        print(check)
 
         for ride in check:
             Books.objects.create(
@@ -76,7 +67,7 @@ class CheckRideView(ModelViewSet):
                 price=ride.price
             )
 
-            books_serializer = BooksSerializer(data=ride)
+            books_serializer = BooksSerializer(data=ride, many=True)
             books_serializer.is_valid(raise_exception=True)
             books_serializer.save()
 

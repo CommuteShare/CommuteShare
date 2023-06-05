@@ -56,8 +56,6 @@ class CheckRide(serializers.Serializer):
 
 
 class BooksSerializer(serializers.ModelSerializer):
-    create_ride = CreateRide
-
     class Meta:
         model = Books
         fields = "__all__"
@@ -67,4 +65,3 @@ class ChecksSerializer(serializers.ModelSerializer):
     class Meta:
         model = Checks
         fields = "__all__"
-
