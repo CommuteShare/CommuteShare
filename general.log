@@ -4537,3 +4537,177 @@ django.db.utils.ProgrammingError: relation "commute_share_createride" does not e
 LINE 1: ...e_seats", "commute_share_createride"."price" FROM "commute_s...
                                                              ^
 
+2023-06-05 14:17:59,077 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-05 14:19:27,151 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-05 14:23:09,958 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-05 14:24:59,460 (WARNING) - django.request - Unauthorized: /api/cars/
+2023-06-05 14:25:30,775 (WARNING) - django.request - Unauthorized: /api/destination/
+2023-06-05 14:29:14,264 (WARNING) - django.request - Unauthorized: /api/destination/
+2023-06-05 14:29:42,466 (WARNING) - django.request - Unauthorized: /api/destination/
+2023-06-05 14:29:43,892 (WARNING) - django.request - Unauthorized: /api/destination/
+2023-06-05 14:39:10,805 (WARNING) - django.request - Unauthorized: /api/destination/
+2023-06-05 14:39:13,886 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\share_config\settings\common.py changed, reloading.
+2023-06-05 14:39:42,247 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-05 14:40:04,093 (ERROR) - django.request - Internal Server Error: /api/destination/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "commute_share_createride" does not exist
+LINE 1: ...e_seats", "commute_share_createride"."price" FROM "commute_s...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1560, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "commute_share_createride" does not exist
+LINE 1: ...e_seats", "commute_share_createride"."price" FROM "commute_s...
+                                                             ^
+
+2023-06-05 16:10:34,832 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-05 16:11:30,543 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\share_config\settings\common.py changed, reloading.
+2023-06-05 16:11:32,457 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-05 16:11:33,154 (WARNING) - django.request - Unauthorized: /api/destination/
+2023-06-05 16:11:42,410 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-05 16:12:32,182 (WARNING) - django.request - Bad Request: /auth/users/
+2023-06-05 16:18:27,657 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:18:53,707 (WARNING) - django.request - Unauthorized: /auth/jwt/create
+2023-06-05 16:19:22,617 (WARNING) - django.request - Unauthorized: /auth/jwt/create
+2023-06-05 16:21:20,510 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:23:50,016 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:23:50,741 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:24:05,281 (WARNING) - django.request - Unauthorized: /auth/jwt/create
+2023-06-05 16:26:40,935 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:26:41,686 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:29:36,439 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:29:36,972 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:35:08,662 (WARNING) - django.request - Unauthorized: /api/cars/
+2023-06-05 16:45:11,647 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:45:12,272 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 16:53:26,815 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:54:56,577 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:55:01,983 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:55:09,473 (WARNING) - django.request - Unauthorized: /api/cars/
+2023-06-05 16:55:18,003 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:55:34,473 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:55:36,200 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:55:51,652 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:56:00,728 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:56:04,029 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:56:12,868 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:56:26,660 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:56:28,715 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:56:41,984 (WARNING) - django.request - Unauthorized: /api/verifications/
+2023-06-05 16:57:30,057 (WARNING) - django.request - Unauthorized: /api/companies/
+2023-06-05 16:57:49,644 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\share_config\settings\common.py changed, reloading.
+2023-06-05 16:57:51,736 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-05 16:58:00,508 (WARNING) - django.request - Unauthorized: /api/companies/
+2023-06-05 16:58:03,141 (WARNING) - django.request - Unauthorized: /api/companies/
+2023-06-05 16:58:18,705 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-05 17:30:48,530 (WARNING) - django.request - Bad Request: /api/cars/
+2023-06-05 17:31:06,987 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-05 17:33:11,969 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-06 18:20:02,718 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-06 18:20:06,339 (WARNING) - django.request - Not Found: /
+2023-06-06 18:20:07,309 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-06 18:20:11,563 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-06 18:20:13,658 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-06 18:21:14,615 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-06 18:21:21,826 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-06 18:21:23,927 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-06 18:21:31,529 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-06 18:21:59,275 (ERROR) - django.request - Internal Server Error: /api/companies/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'user_id' was declared on serializer CompanySerializer, but has not been included in the 'fields' option.
+2023-06-06 18:22:01,456 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-06 18:22:11,957 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-06 18:22:13,328 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-06 18:22:16,646 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-06 18:23:41,495 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-06 18:23:43,161 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-06 18:24:40,280 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-06 18:24:41,905 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader

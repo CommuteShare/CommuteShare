@@ -8,21 +8,27 @@ import random
 
 
 class CarSerializer(serializers.ModelSerializer):
+    user_id = serializers.IntegerField(read_only=True)
+
     class Meta:
         model = CarModel
-        fields = ['user', 'license_plate_number', 'identification_number', 'color', 'model']
+        fields = ['user_id', 'license_plate_number', 'identification_number', 'color', 'model']
 
 
 class CompanySerializer(serializers.ModelSerializer):
+    user_id = serializers.IntegerField(read_only=True)
+
     class Meta:
         model = CompanyModel
-        fields = ['user', 'name', 'email', 'location']
+        fields = ['user_id', 'name', 'email', 'location']
 
 
 class VerificationSerializer(serializers.ModelSerializer):
+    user_id = serializers.IntegerField(read_only=True)
+
     class Meta:
         model = VerificationModel
-        fields = ['user', 'gender', 'photograph', 'id_card_front', 'id_card_back']
+        fields = ['user_id', 'gender', 'photograph', 'id_card_front', 'id_card_back']
 
 
 class UserCreate(CreateSerializer):
@@ -33,15 +39,22 @@ class UserCreate(CreateSerializer):
 
 
 class DriverSerializer(serializers.ModelSerializer):
+    user_id = serializers.IntegerField(read_only=True)
+    company_id = serializers.IntegerField(read_only=True)
+    verification_id = serializers.IntegerField(read_only=True)
+    car_id = serializers.IntegerField(read_only=True)
+
     class Meta:
         model = DriverModel
-        fields = ['user', 'company', 'verification', 'car', 'licence_number', 'identity_verified']
+        fields = ['user_id', 'company_id', 'verification_id', 'car_id', 'licence_number']
 
 
 class CreateRideSerializer(serializers.ModelSerializer):
+    driver_id = serializers.IntegerField(read_only=True)
+
     class Meta:
         model = CreateRide
-        fields = ['driver', 'departure_location', 'destination_location', 'departure_time',
+        fields = ['driver_id', 'departure_location', 'destination_location', 'departure_time',
                   'available_seats', 'price']
 
 
