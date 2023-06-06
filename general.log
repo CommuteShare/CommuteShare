@@ -4691,3 +4691,10 @@ AssertionError: Class ChecksSerializer missing "Meta.model" attribute
 2023-06-04 18:36:32,131 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2023-06-04 18:37:47,003 (WARNING) - django.request - Bad Request: /api/destination/
 >>>>>>> aece57c62075882e887e9383744749aef1908d9c
+2023-06-04 18:36:12,595 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-04 18:36:38,484 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-04 18:36:46,630 (INFO) - django.utils.autoreload - /home/goodlife431/django-projects/CM/CommuteShare/commute_share/migrations/0001_initial.py changed, reloading.
+2023-06-04 18:36:47,337 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-05 07:15:22,859 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-05 07:17:14,373 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-05 10:33:53,743 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader

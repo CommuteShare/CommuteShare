@@ -42,7 +42,6 @@ class CreateRideView(generics.CreateAPIView):
     serializer_class = CreateRideSerializer
 
 
-<<<<<<< HEAD
 class AcceptRideView(APIView):
     def post(self, request):
         driver = DriverModel.objects.get(user=request.user)
@@ -65,7 +64,7 @@ class AcceptRideView(APIView):
 
 
 class StartRideView(APIView):
-    def post(self, request,):
+    def post(self, request, ):
         driver = DriverModel.objects.get(user=request.user)
         book_ride_id = request.data.get('book_ride_id')
 
@@ -96,7 +95,8 @@ class EndRideView(APIView):
 
         serializer = BookRideSerializer(book_ride)
         return Response(serializer.data, status=status.HTTP_200_OK)
-=======
+
+
 class BookRideView(ModelViewSet):
     serializer_class = BooksSerializer
     queryset = Books.objects.all()
@@ -111,7 +111,8 @@ class CheckRideView(ModelViewSet):
 
         # Ensure the data is in the expected dictionary format
         if not isinstance(data, dict):
-            return Response({"non_field_errors": ["Invalid data. Expected a dictionary."]}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"non_field_errors": ["Invalid data. Expected a dictionary."]},
+                            status=status.HTTP_400_BAD_REQUEST)
 
         serializer = self.get_serializer(data=data)
         serializer.is_valid(raise_exception=True)
@@ -140,4 +141,3 @@ class CheckRideView(ModelViewSet):
 class ChecksView(ModelViewSet):
     queryset = Checks.objects.all()
     serializer_class = ChecksSerializer
->>>>>>> aece57c62075882e887e9383744749aef1908d9c

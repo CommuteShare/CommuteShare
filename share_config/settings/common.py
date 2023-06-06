@@ -24,7 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-ALLOWED_HOSTS = []
 # Application definition
 
 DJANGO_APPS = [
@@ -37,12 +36,8 @@ DJANGO_APPS = [
 ]
 LOCAL_APPS = ['commute_share', 'api']
 
-<<<<<<< HEAD
-THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary', 'phonenumbers', 'cloudinary_storage',
-=======
-THIRD_PARTY = ['rest_framework_simplejwt.token_blacklist', 'rest_framework', 'debug_toolbar', 'djoser', 'cloudinary',
-               'phonenumbers', 'cloudinary_storage',
->>>>>>> aece57c62075882e887e9383744749aef1908d9c
+
+THIRD_PARTY = ['rest_framework', 'debug_toolbar', 'djoser', 'cloudinary','phonenumbers', 'cloudinary_storage',
                'phonenumber_field', 'corsheaders']
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY
@@ -83,16 +78,6 @@ WSGI_APPLICATION = 'share_config.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-    }
-}
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -150,7 +135,7 @@ CLOUDINARY_STORAGE = {
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    # "http://127.0.0.1:9000",
+    "http://127.0.0.1:9000",
 ]
 
 REST_FRAMEWORK = {
