@@ -3,7 +3,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework import generics, status
 
 from rest_framework.response import Response
-
+from .permissions import IsDriver
 from .serializers import *
 from commute_share.models import *
 
@@ -11,26 +11,54 @@ from commute_share.models import *
 class DriverSignUpView(generics.CreateAPIView):
     queryset = DriverModel.objects.all()
     serializer_class = DriverSerializer
+    permission_classes = [IsDriver]
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
 
 
 class CarDetailView(ModelViewSet):
     queryset = CarModel.objects.all()
     serializer_class = CarSerializer
+    permission_classes = [IsDriver]
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
 
 
 class VerificationDetailView(ModelViewSet):
     queryset = VerificationModel.objects.all()
     serializer_class = VerificationSerializer
 
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
+
 
 class CompanyDetailView(ModelViewSet):
     queryset = CompanyModel.objects.all()
     serializer_class = CompanySerializer
 
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
+
 
 class CreateRideView(generics.CreateAPIView):
     queryset = CreateRide.objects.all()
     serializer_class = CreateRideSerializer
+    permission_classes = [IsDriver]
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
 
 
 class BookRideView(ModelViewSet):
@@ -49,24 +77,10 @@ class CheckRideView(ModelViewSet):
         serializer.is_valid(raise_exception=True)
 
         destination_location = serializer.validated_data.get('destination_location')
-
         check = CreateRide.objects.filter(destination_location=destination_location)
-        print(check)
 
         for ride in check:
-            Books.objects.create(
-                driver=ride.driver,
-                departure_location=ride.departure_location,
-                destination_location=ride.destination_location,
-                departure_time=ride.departure_time,
-                available_seats=ride.available_seats,
-                price=ride.price
-            )
-
-            books_serializer = BooksSerializer(data=ride, many=True)
-            books_serializer.is_valid(raise_exception=True)
-            books_serializer.save()
-
+            Books.objects.create(create_ride=ride)
         return Response({"destination_location": destination_location}, status=status.HTTP_200_OK)
 
 

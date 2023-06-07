@@ -24,80 +24,10 @@ class CompanyModel(models.Model):
     def __str__(self):
         return f"{self.name}    "
 
-    def book_ride(self, ride, driver, available_seats, departure_time, price):
-        if available_seats <= 0:
-            raise ValidationError("Invalid number of available seats.")
-
-        if ride.departure_location == ride.destination_location:
-            raise ValidationError("Departure and destination locations cannot be the same.")
-
-        if ride.departure_time <= departure_time:
-            raise ValidationError("Invalid departure time.")
-
-        book_ride = BookRideModel(
-            ride=ride,
-            passengers=self,
-            driver=driver,
-            available_seats=available_seats,
-            departure_time=departure_time,
-            price=price,
-        )
-        book_ride.available_seats -= 1
-        notification = NotificationModel.objects.create(
-            user=driver.user,
-            passenger=self,
-            is_read=False,
-            created_at=timezone.now()
-        )
-        notification.save()
-        book_ride.save()
-        return book_ride
-
 
 class DriverModel(models.Model):
-    user = models.OneToOneField(User, on_delete=models.PROTECT)
-    verification = models.OneToOneField("VerificationModel", on_delete=models.PROTECT)
-    company = models.OneToOneField(CompanyModel, on_delete=models.PROTECT)
-    car = models.ForeignKey("CarModel", on_delete=models.PROTECT)
-    identity_verified = models.BooleanField()
     licence_number = models.CharField(unique=True, max_length=10, null=False, blank=False)
-
-    def accept_ride(self, book_ride):
-        if book_ride.driver != self:
-            raise ValidationError("This ride does not belong to you.")
-
-        book_ride.ride_status = 'CONFIRMED'
-        book_ride.save()
-
-        notification = NotificationModel.objects.get(user=self, passenger=book_ride.passengers)
-        notification.is_read = True
-        notification.save()
-
-        return book_ride
-
-    def start_ride(self, book_ride):
-        if book_ride.driver != self:
-            raise ValidationError("This ride does not belong to you.")
-
-        book_ride.ride_status = 'IN_PROGRESS'
-        book_ride.save()
-
-        return book_ride
-
-    def end_ride(self, book_ride):
-        if book_ride.driver != self:
-            raise ValidationError("This ride does not belong to you.")
-
-        book_ride.ride_status = 'COMPLETED'
-        book_ride.save()
-
-        return book_ride
-
-    def get_unread_notifications(self):
-        return NotificationModel.objects.filter(user=self, is_read=False)
-
-    def __str__(self):
-        return f'{self.user.first_name}--{self.user.last_name}'
+    user = models.OneToOneField(User, on_delete=models.PROTECT)
 
 
 class CustomerServiceModel(models.Model):
@@ -148,6 +78,7 @@ class BookRideModel(models.Model):
     BOOK_RIDE_STATUS = [
         ('CONFIRMED', 'confirmed'),
         ('PENDING', 'pending'),
+        ('IN PROGRESS', 'In progress'),
         ('CANCELED', 'canceled')
     ]
     destination_location = models.CharField(null=False, blank=False, max_length=1000)
@@ -184,7 +115,7 @@ class CreateRide(models.Model):
         return CreateRide.objects.filter(destination_location=destination_location)
 
     def __str__(self):
-        return f'{self.driver.user.first_name}--{self.driver.user.last_name} --- {self.driver.car.model}--- {self.driver.car.color}'
+        return f'{self.driver.user.first_name}--{self.driver.user.last_name} '
 
 
 class NotificationModel(models.Model):
@@ -195,16 +126,25 @@ class NotificationModel(models.Model):
 
 
 class Books(models.Model):
-    driver = models.ForeignKey(DriverModel, on_delete=models.CASCADE)
-    departure_location = models.CharField(max_length=1000)
-    destination_location = models.CharField(max_length=100)
-    departure_time = models.TimeField(max_length=100)
-    available_seats = models.IntegerField(default=0)
-    price = models.DecimalField(max_digits=5, decimal_places=2, default=0)
-
-    def __str__(self):
-        return f'{self.driver.user.first_name}--{self.driver.user.last_name} --- {self.driver.car.model}--- {self.driver.car.color}'
-
+    create_ride = models.ForeignKey(CreateRide,on_delete=models.CASCADE)
 
 class Checks(models.Model):
     books = models.OneToOneField(Books, on_delete=models.CASCADE)
+
+#
+# book_ride.available_seats -= 1
+#         notification = NotificationModel.objects.create(
+#             user=driver.user,
+#             passenger=self,
+#             is_read=False,
+#             created_at=timezone.now()
+#
+#  book_ride = BookRideModel(
+#             ride=ride,
+#             passengers=self,
+#             driver=driver,
+#             available_seats=available_seats,
+#             departure_time=departure_time,
+#             price=price,
+#         )
+#         )

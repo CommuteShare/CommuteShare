@@ -4711,3 +4711,1420 @@ AssertionError: The field 'user_id' was declared on serializer CompanySerializer
 2023-06-06 18:23:43,161 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2023-06-06 18:24:40,280 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
 2023-06-06 18:24:41,905 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:25:20,971 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:25:25,580 (WARNING) - django.request - Unauthorized: /api/companies/
+2023-06-07 06:25:26,709 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:25:27,714 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:25:29,110 (WARNING) - django.request - Unauthorized: /api/companies/
+2023-06-07 06:25:30,271 (WARNING) - django.request - Unauthorized: /api/companies/
+2023-06-07 06:25:30,839 (WARNING) - django.request - Unauthorized: /api/companies/
+2023-06-07 06:25:31,205 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:25:32,373 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:25:32,942 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:25:43,340 (WARNING) - django.request - Unauthorized: /api/companies/
+2023-06-07 06:25:45,444 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:25:56,902 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-07 06:25:58,976 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:26:06,761 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-07 06:26:08,904 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:26:17,514 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:27:08,058 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 06:27:10,157 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:27:18,456 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "identity_verified" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (36, null, A1234564, null, null, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "identity_verified" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (36, null, A1234564, null, null, null, null).
+
+2023-06-07 06:27:20,660 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:28:41,749 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:28:47,159 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "car_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (37, A1234564, null, null, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "car_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (37, A1234564, null, null, null, null).
+
+2023-06-07 06:28:49,384 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:38:29,809 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-07 06:38:31,226 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:45:06,637 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:45:25,704 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 06:45:27,091 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:45:38,428 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:45:42,303 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:45:44,108 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 06:45:46,244 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:45:48,747 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (38, A1234564, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (38, A1234564, null).
+
+2023-06-07 06:45:50,926 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:46:37,714 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 06:46:39,447 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:46:40,420 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:46:41,206 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (39, A1234564, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (39, A1234564, null).
+
+2023-06-07 06:46:43,410 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:47:08,979 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\permissions.py changed, reloading.
+2023-06-07 06:47:10,775 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:47:11,894 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:47:12,255 (WARNING) - django.request - Forbidden: /api/driver_profile/
+2023-06-07 06:47:14,344 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:47:20,440 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\permissions.py changed, reloading.
+2023-06-07 06:47:21,887 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:47:23,206 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (40, A1234564, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (40, A1234564, null).
+
+2023-06-07 06:47:25,455 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:48:22,050 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:48:22,625 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 06:48:24,722 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:48:58,845 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (41, QFG4354345, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (41, QFG4354345, null).
+
+2023-06-07 06:49:01,063 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:51:31,190 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:55:00,004 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-07 06:55:01,654 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:55:46,940 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 06:55:48,728 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:55:50,183 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:55:51,818 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 06:55:53,889 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:56:57,244 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 06:59:31,974 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 06:59:34,300 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 06:59:41,634 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (43, QFG4354345, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (43, QFG4354345, null).
+
+2023-06-07 06:59:43,848 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:07:15,249 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:07:17,070 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:07:23,897 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 07:07:25,986 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:07:28,444 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (44, QFG4354345, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (44, QFG4354345, null).
+
+2023-06-07 07:07:30,627 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:07:43,411 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:07:45,248 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:10:38,965 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:10:40,504 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:10:56,080 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:11:02,600 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:11:03,605 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (45, QFG4354345, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (45, QFG4354345, null).
+
+2023-06-07 07:11:05,786 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:11:31,147 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 07:11:33,206 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:11:35,209 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:11:36,859 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (46, QFG4354345, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (46, QFG4354345, null).
+
+2023-06-07 07:11:39,136 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:11:42,967 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 07:11:44,960 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:11:52,040 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:12:00,760 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (47, QFG4354345, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (47, QFG4354345, null).
+
+2023-06-07 07:12:02,982 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:12:06,113 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:12:35,646 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:13:10,999 (WARNING) - django.request - Unauthorized: /api/driver_profile/
+2023-06-07 07:13:13,089 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:13:18,485 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 07:13:20,642 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:13:22,743 (ERROR) - django.request - Internal Server Error: /api/driver_profile/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (48, QFG4354345, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_drivermodel" violates not-null constraint
+DETAIL:  Failing row contains (48, QFG4354345, null).
+
+2023-06-07 07:13:24,911 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:13:41,487 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:13:46,824 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:14:15,353 (ERROR) - django.request - Internal Server Error: /api/companies/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "commute_share_companymodel" violates not-null constraint
+DETAIL:  Failing row contains (6, shep's company, shep@gmail.com, shep's street, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "commute_share_companymodel" violates not-null constraint
+DETAIL:  Failing row contains (6, shep's company, shep@gmail.com, shep's street, null).
+
+2023-06-07 07:14:17,520 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:17:24,873 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:17:26,432 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:17:40,755 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 07:17:42,837 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:17:46,916 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:17:50,221 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:18:00,611 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:19:21,991 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:19:24,469 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:22:52,996 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 07:22:55,785 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:23:08,591 (WARNING) - django.request - Not Found: /api/destinations
+2023-06-07 07:23:16,072 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:23:20,840 (ERROR) - django.request - Internal Server Error: /api/destination/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py", line 62, in create
+    car_model = user.carmodel.model
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\fields\related_descriptors.py", line 492, in __get__
+    raise self.RelatedObjectDoesNotExist(
+commute_share.models.User.carmodel.RelatedObjectDoesNotExist: User has no carmodel.
+2023-06-07 07:23:22,964 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:25:15,992 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 07:25:18,463 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:26:38,389 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-07 07:26:40,182 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:26:43,022 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-07 07:26:45,371 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:29:01,785 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 07:29:03,193 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:30:59,443 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 07:31:01,400 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:31:07,018 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:31:09,432 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:33:06,061 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 07:33:07,782 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:33:16,232 (WARNING) - django.request - Bad Request: /api/destination/
+2023-06-07 07:33:18,339 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:36:08,642 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:36:10,617 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:39:26,499 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:39:28,693 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:39:42,957 (WARNING) - django.request - Not Found: /api/ride/ccreate
+2023-06-07 07:39:48,924 (WARNING) - django.request - Method Not Allowed: /api/ride/create/
+2023-06-07 07:39:51,025 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:40:13,282 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "driver_id" of relation "commute_share_createride" violates not-null constraint
+DETAIL:  Failing row contains (34, yaba, chemist, 10:43:00, 4, 100.00, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\sql\compiler.py", line 1820, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 167, in _record
+    return method(sql, params)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "driver_id" of relation "commute_share_createride" violates not-null constraint
+DETAIL:  Failing row contains (34, yaba, chemist, 10:43:00, 4, 100.00, null).
+
+2023-06-07 07:40:15,510 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:43:04,753 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:43:07,252 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:43:22,544 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:43:24,020 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:43:48,156 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py", line 67, in create
+    driver_id = validated_data.pop('driver_id')
+KeyError: 'driver_id'
+2023-06-07 07:43:50,341 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:44:57,933 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:44:59,442 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:45:03,051 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py", line 68, in create
+    driver = DriverModel.objects.get(id=driver_id)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+commute_share.models.DriverModel.DoesNotExist: DriverModel matching query does not exist.
+2023-06-07 07:45:05,239 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:45:27,276 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 07:45:29,421 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:45:34,127 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:45:37,894 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 07:45:39,967 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:45:40,924 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:45:41,412 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py", line 68, in create
+    driver = DriverModel.objects.get(id=driver_id)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+commute_share.models.DriverModel.DoesNotExist: DriverModel matching query does not exist.
+2023-06-07 07:45:43,519 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:45:46,397 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:45:46,843 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py", line 68, in create
+    driver = DriverModel.objects.get(id=driver_id)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+commute_share.models.DriverModel.DoesNotExist: DriverModel matching query does not exist.
+2023-06-07 07:45:48,995 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:47:43,179 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:47:45,153 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:47:50,630 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:47:51,813 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py", line 69, in create
+    driver = DriverModel.objects.get(id=driver_id)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+commute_share.models.DriverModel.DoesNotExist: DriverModel matching query does not exist.
+2023-06-07 07:47:53,975 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:52:33,673 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:52:35,428 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:52:39,954 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:52:41,494 (ERROR) - django.request - Internal Server Error: /api/ride/create/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py", line 70, in create
+    return super().create(validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\db\models\fields\related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "49": "CreateRide.driver" must be a "DriverModel" instance.
+2023-06-07 07:52:43,843 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:53:57,907 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 07:54:00,204 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 07:54:06,244 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 07:55:56,479 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 07:55:58,566 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 08:01:34,878 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 08:01:36,594 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:02:00,386 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 08:02:01,891 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:02:14,642 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 08:02:16,389 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:02:17,394 (WARNING) - django.request - Unauthorized: /api/ride/create/
+2023-06-07 08:02:18,459 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 08:02:27,355 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-07 08:03:15,583 (WARNING) - django.request - Unauthorized: /auth/jwt/create
+2023-06-07 08:05:13,878 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-07 08:06:01,305 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-07 08:08:25,476 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 08:08:27,327 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:09:28,169 (WARNING) - django.request - Unauthorized: /api/destination/
+2023-06-07 08:11:21,174 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-07 08:11:23,945 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:12:12,786 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-07 08:12:14,282 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:14:06,870 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-07 08:14:08,931 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:15:51,572 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:19:04,420 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 08:19:06,316 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:19:20,703 (WARNING) - django.request - Unauthorized: /api/book_rides/
+2023-06-07 08:20:27,445 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 08:20:29,198 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 08:22:22,696 (WARNING) - django.request - Unauthorized: /api/book_rides/
+2023-06-07 08:25:03,577 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 08:25:05,841 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
