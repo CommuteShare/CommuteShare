@@ -57,7 +57,6 @@ class VerificationModel(models.Model):
     id_card_front = models.ImageField(null=False, blank=False, upload_to="id_card_front/")
     id_card_back = models.ImageField(null=False, blank=False, upload_to="id_card_back/")
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    is_verified = models.BooleanField(default=False)
 
     def __str__(self):
         return "Identity Verified"
@@ -126,7 +125,8 @@ class NotificationModel(models.Model):
 
 
 class Books(models.Model):
-    create_ride = models.ForeignKey(CreateRide,on_delete=models.CASCADE)
+    create_ride = models.ForeignKey(CreateRide, on_delete=models.CASCADE)
+
 
 class Checks(models.Model):
     books = models.OneToOneField(Books, on_delete=models.CASCADE)

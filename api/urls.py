@@ -6,12 +6,12 @@ router = routers.SimpleRouter()
 router.register("cars", CarDetailView, basename="cars")
 router.register("companies", CompanyDetailView, basename="companies")
 router.register("verifications", VerificationDetailView, basename="verifications")
-router.register('book_rides', BookRideView, basename='book-ride')
+router.register('book_rides', BookRideView, basename='book_ride_detail')
 router.register('destination', CheckRideView)
-router.register('checks', ChecksView)
+router.register('ride/create', CreateRideView, basename='ride_create')
 urlpatterns = [
     path('', include(router.urls)),
     path("driver_profile/", DriverSignUpView.as_view()),
-    path('ride/create/', CreateRideView.as_view(), name='ride-create'),
+    # path('/<int:pk>', CreateRideView.as_view(), name='ride-create'),
 
 ]

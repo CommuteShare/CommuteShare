@@ -50,8 +50,9 @@ class CompanyDetailView(ModelViewSet):
         return context
 
 
-class CreateRideView(generics.CreateAPIView):
+class CreateRideView(ModelViewSet):
     queryset = CreateRide.objects.all()
+    lookup_field = "pk"
     serializer_class = CreateRideSerializer
     permission_classes = [IsDriver]
 
@@ -63,6 +64,7 @@ class CreateRideView(generics.CreateAPIView):
 
 class BookRideView(ModelViewSet):
     serializer_class = BooksSerializer
+    # lookup_field = "pk"
     queryset = Books.objects.all()
 
 
@@ -84,9 +86,9 @@ class CheckRideView(ModelViewSet):
         return Response({"destination_location": destination_location}, status=status.HTTP_200_OK)
 
 
-class ChecksView(ModelViewSet):
-    queryset = Checks.objects.all()
-    serializer_class = ChecksSerializer
+# class ChecksView(ModelViewSet):
+#     queryset = Checks.objects.all()
+#     serializer_class = ChecksSerializer
 
 
 class AcceptRideView(APIView):

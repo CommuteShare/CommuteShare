@@ -81,12 +81,22 @@ class CheckRide(serializers.Serializer):
 
 
 class BooksSerializer(serializers.ModelSerializer):
+    create_ride = serializers.HyperlinkedRelatedField(
+        queryset=CreateRide.objects.all(),
+        view_name='ride_create-detail',
+        lookup_field="pk"
+    )
+
     class Meta:
         model = Books
-        fields = "__all__"
+        fields = ['create_ride']
 
 
 class ChecksSerializer(serializers.ModelSerializer):
     class Meta:
         model = Checks
         fields = "__all__"
+
+
+# class RideDetail(serializers.ModelSerializer):
+#     class Meta:

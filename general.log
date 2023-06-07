@@ -6128,3 +6128,1440 @@ ValueError: Cannot assign "49": "CreateRide.driver" must be a "DriverModel" inst
 2023-06-07 08:22:22,696 (WARNING) - django.request - Unauthorized: /api/book_rides/
 2023-06-07 08:25:03,577 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
 2023-06-07 08:25:05,841 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 10:28:43,994 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 10:28:52,618 (WARNING) - django.request - Unauthorized: /api/book_rides/
+2023-06-07 10:28:54,335 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 10:28:58,188 (WARNING) - django.request - Unauthorized: /api/book_rides/
+2023-06-07 10:29:13,770 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-07 10:32:39,430 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 10:32:41,755 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:01:31,561 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 11:01:33,579 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:06:27,174 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 11:07:35,704 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:22:33,634 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:23:30,765 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:23:48,049 (WARNING) - django.request - Unauthorized: /api/book_rides/
+2023-06-07 11:23:48,093 (WARNING) - django.request - Unauthorized: /api/book_rides/
+2023-06-07 11:23:48,126 (WARNING) - django.request - Unauthorized: /api/book_rides/
+2023-06-07 11:24:55,399 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 11:24:57,926 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:25:01,951 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 11:25:04,093 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:25:47,839 (WARNING) - django.request - Forbidden: /api/cars/
+2023-06-07 11:26:15,574 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\urls.py changed, reloading.
+2023-06-07 11:26:17,552 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:28:39,247 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 11:28:41,728 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:28:46,642 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 11:28:48,691 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:28:51,540 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 11:28:53,758 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:28:54,390 (WARNING) - django.request - Not Found: /api/checks/
+2023-06-07 11:29:32,412 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 11:29:34,542 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:29:36,144 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 539, in get_attribute
+    relationship = get_attribute(instance, self.source_attrs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Books' object has no attribute 'create'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 560, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `create` on serializer `BooksSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Books` instance.
+Original exception text was: 'Books' object has no attribute 'create'.
+2023-06-07 11:29:48,178 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 11:29:50,150 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:29:51,738 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 565, in to_representation
+    return [
+TypeError: 'CreateRide' object is not iterable
+2023-06-07 11:30:04,952 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 11:30:06,517 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:30:08,045 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'book_ride' not found. 'book_ride' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "book_ride". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 11:30:44,543 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 11:30:47,338 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:30:48,824 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'CreateRideView' not found. 'CreateRideView' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "CreateRideView". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 11:36:01,709 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 11:36:03,076 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:36:15,645 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'book_ride' not found. 'book_ride' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "book_ride". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 11:39:52,645 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\urls.py changed, reloading.
+2023-06-07 11:39:55,516 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 11:40:05,235 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'book_ride-detail' not found. 'book_ride-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "book_ride-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 11:40:11,224 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'book_ride-detail' not found. 'book_ride-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "book_ride-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 13:11:06,165 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\urls.py changed, reloading.
+2023-06-07 13:11:39,281 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 13:14:46,242 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 13:15:27,596 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 13:16:02,213 (WARNING) - django.request - Unauthorized: /api/book_rides/
+2023-06-07 13:16:28,479 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-07 13:16:37,199 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-07 13:18:29,305 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'book_ride-detail' not found. 'book_ride-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "book_ride-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 13:21:02,285 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\urls.py changed, reloading.
+2023-06-07 13:21:56,382 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 13:23:49,625 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'book_ride_detail' not found. 'book_ride_detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "book_ride_detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 13:24:06,782 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'book_ride_detail' not found. 'book_ride_detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "book_ride_detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 13:24:45,862 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 13:24:48,458 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 13:25:19,658 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 13:25:21,619 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 13:25:30,480 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride-create  ' not found. 'ride-create  ' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride-create  ". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 13:26:00,275 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 13:26:02,121 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 13:26:03,705 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride-create  ' not found. 'ride-create  ' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride-create  ". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 13:26:23,099 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 13:26:24,897 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 13:26:26,502 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride-create  ' not found. 'ride-create  ' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride-create  ". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:01:23,351 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:01:33,396 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride-create  ' not found. 'ride-create  ' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride-create  ". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:01:39,576 (WARNING) - django.request - Not Found: /api/ride/create/
+2023-06-07 14:01:43,398 (WARNING) - django.request - Forbidden: /api/ride/create/1
+2023-06-07 14:02:19,054 (WARNING) - django.request - Unauthorized: /api/driver_profile/
+2023-06-07 14:02:20,223 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:02:21,240 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:02:26,473 (WARNING) - django.request - Unauthorized: /auth/users/
+2023-06-07 14:02:28,568 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:02:31,557 (WARNING) - django.request - Method Not Allowed: /auth/jwt/create
+2023-06-07 14:02:33,661 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:02:48,954 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:03:44,101 (WARNING) - django.request - Not Found: /api/ride/create/
+2023-06-07 14:03:48,776 (WARNING) - django.request - Method Not Allowed: /api/ride/create/1
+2023-06-07 14:03:50,927 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:03:54,210 (WARNING) - django.request - Method Not Allowed: /api/ride/create/2
+2023-06-07 14:03:56,331 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:03:56,574 (WARNING) - django.request - Method Not Allowed: /api/ride/create/3
+2023-06-07 14:03:58,681 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:04:03,090 (WARNING) - django.request - Not Found: /api/ride/create/
+2023-06-07 14:05:40,283 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:05:44,204 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:05:50,866 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:07:42,409 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\commute_share\models.py changed, reloading.
+2023-06-07 14:07:43,737 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:13:53,277 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 14:13:56,850 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:14:35,750 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\urls.py changed, reloading.
+2023-06-07 14:14:37,335 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:15:05,639 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:15:19,364 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:15:23,751 (WARNING) - django.request - Not Found: /api/ride/create1
+2023-06-07 14:15:30,099 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:15:55,436 (WARNING) - django.request - Not Found: /api/book_instance/
+2023-06-07 14:16:00,815 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride-create  ' not found. 'ride-create  ' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride-create  ". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:16:03,387 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:16:58,343 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:17:00,308 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:17:01,954 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride-create  ' not found. 'ride-create  ' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride-create  ". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:17:04,515 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:17:44,685 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:17:46,695 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:20:21,319 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:20:23,071 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:20:26,564 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:20:33,312 (WARNING) - django.request - Not Found: /api/book_rides/2/
+2023-06-07 14:20:43,616 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:22:34,059 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 14:22:36,442 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:23:31,727 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 14:23:33,931 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:23:36,031 (WARNING) - django.request - Forbidden: /api/ride/create/1/
+2023-06-07 14:24:18,136 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:24:31,728 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:24:34,090 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:24:35,625 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride-create  ' not found. 'ride-create  ' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride-create  ". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:24:38,192 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:25:42,442 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride-create  ' not found. 'ride-create  ' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride-create  ". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:25:44,907 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:26:18,071 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:26:20,744 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:26:25,783 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:26:28,019 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:26:29,514 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride-create/' not found. 'ride-create/' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride-create/". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:26:32,016 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:26:41,987 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\urls.py changed, reloading.
+2023-06-07 14:26:44,326 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:26:59,648 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:27:01,729 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:27:03,293 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride_create' not found. 'ride_create' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride_create". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:27:05,764 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:30:57,433 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 14:31:00,996 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:31:29,229 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 14:31:30,729 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:31:41,343 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 14:31:44,347 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:31:51,490 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 14:31:53,700 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:43:14,982 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:43:18,096 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:43:51,679 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\views.py changed, reloading.
+2023-06-07 14:43:54,367 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:43:56,172 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `url ` is not valid for model `Books`.
+2023-06-07 14:43:58,417 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:44:40,396 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:44:42,292 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:44:43,521 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'books-detail' not found. 'books-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "books-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:44:45,682 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:44:56,892 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:44:58,311 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:45:26,949 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:45:28,803 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:45:30,458 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride_create' not found. 'ride_create' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride_create". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:45:32,966 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:45:46,037 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride_create' not found. 'ride_create' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride_create". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:45:48,560 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:46:52,796 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:46:55,612 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:49:24,191 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:49:26,224 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:49:39,170 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride_create' not found. 'ride_create' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride_create". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:49:41,683 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:49:44,115 (ERROR) - django.request - Internal Server Error: /api/book_rides/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 401, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 339, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ride_create' not found. 'ride_create' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\.virtualenvs\CommuteShare-A_iDsKMK\lib\site-packages\rest_framework\relations.py", line 416, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "ride_create". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2023-06-07 14:49:46,659 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:49:57,412 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 14:49:59,318 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-07 14:50:02,978 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:50:08,817 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:50:35,641 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:50:38,923 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:50:42,134 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:50:56,692 (WARNING) - django.request - Method Not Allowed: /api/driver_profile/
+2023-06-07 14:50:58,804 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:51:03,683 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:51:12,657 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:51:15,970 (WARNING) - django.request - Not Found: /api/book_instance/
+2023-06-07 14:51:21,879 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 14:51:24,042 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-07 15:12:41,331 (INFO) - django.utils.autoreload - C:\Users\user\OneDrive\Desktop\CommuteShare\api\serializers.py changed, reloading.
+2023-06-07 15:12:43,280 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
